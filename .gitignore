@@ -1,2 +1,4 @@
 *.tmp
 *.min
+README/*.pdf
+!README/all-layer-diagrams.pdf

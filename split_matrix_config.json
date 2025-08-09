@@ -1,0 +1,421 @@
+{
+  "userLayouts": [
+    {
+      "name": "GRAPHITE",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          ["F1", "F2", "F3", "F4", "F5", null],
+          ["+", "1", "2", "3", "4", "5"],
+          ["`", "B", "L", "D", "W", "Z"],
+          ["=", "N", "R", "T", "S", "G"],
+          ["LOWER", "Q", "X", "M", "C", "V"],
+          ["MAGIC", "\\", "(", ")", "`", null]
+        ],
+        "thumbRows": [
+          ["⎋", "[", "]"],
+          ["⌫", "Delete", "Insert"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [null, "F6", "F7", "F8", "F9", "F10"],
+          ["6", "7", "8", "9", "0", "\\"],
+          ["'", "F", "O", "U", "J", ";"],
+          ["Y", "H", "A", "E", "I", ","],
+          ["K", "P", ".", "-", "/", "LOWER"],
+          [null, "PgUp", "Scroll↑", "Scroll↓", "PgDn", "MAGIC"]
+        ],
+        "thumbRows": [
+          ["Home", "END", "↵"],
+          ["Typing", "⇥", "⎵"]
+        ]
+      }
+    },
+    {
+      "name": "Function",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", "⌘⌥F16"],
+          [null, "↵", "⎵", "⇥", "⌫", "⌘⌥F17"],
+          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "⌘⌥F18"],
+          [null, "Sel All", "Sel Line", "Sel Word", "🔍", "⌘⌥F19"],
+          [null, "Undo", "Redo", "🔍←", "🔍→", null]
+        ],
+        "thumbRows": [
+          ["🔒Fn", null, null],
+          []
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          ["🏠", "▶", "⏮", "⏭", "⏹", "⏏"],
+          ["⌘⇧N", "F7", "F8", "F9", "F10", "F13"],
+          ["⌘⇧Y", "F4", "F5", "F6", "F11", "F14"],
+          ["⌘⇧A", "F1", "F2", "F3", "F12", "F15"],
+          [null, "☀⚡", "☀+", "☀-", "☀0", "☀🤖"]
+        ],
+        "thumbRows": [
+          ["⏯", "⏮", "⏭"],
+          ["🔇", "🔉", "🔊"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F20",
+      "type": "toggle"
+    },
+    {
+      "name": "Cursor",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", "`"],
+          [null, "↵", "⎵", "⇥", "⌫", "Cut"],
+          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "Copy"],
+          ["⌘L", "Sel All", "Sel Line", "Sel Word", "🔍", "Paste"],
+          ["⌘K", "Undo", "Redo", "🔍←", "🔍→", null]
+        ],
+        "thumbRows": [
+          ["⇧⇥", "⇥", null],
+          ["🔒Cur", null, null]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          ["`", null, null, null, null, null],
+          ["Cut", "⇧⇥", "Undo", "Redo", "⇥", null],
+          ["Copy", "←", "↑", "↓", "→", "⚡⇧"],
+          ["Paste", "Home", "PgUp", "PgDn", "End", "⌘L"],
+          [null, "🔍", "🔍←", "🔍→", "⌘H", "⌘K"]
+        ],
+        "thumbRows": [
+          ["Clear", "Ext Line", "Ext Word"],
+          ["Sel All", "Sel Line", "Sel Word"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F19",
+      "type": "toggle"
+    },
+    {
+      "name": "Number",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", null],
+          [null, "↵", "⎵", "⇥", "⌫", "F17"],
+          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "F18"],
+          ["E", "Sel All", "Sel Line", "Sel Word", "🔍", "F19"],
+          ["_", "Undo", "Redo", "🔍←", "🔍→", null]
+        ],
+        "thumbRows": [
+          [],
+          [null, "🔒Num", null]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [null, "A", "B", "C", "D", "E"],
+          ["|", "#", "$", "^", "~", "!"],
+          ["G", "7", "8", "9", ":", "%"],
+          ["K", "4", "5", "6", "-", "+"],
+          ["J", "1", "2", "3", "/", "*"],
+          [null, "[", "(", ")", "]", "@"]
+        ],
+        "thumbRows": [
+          ["<", ">", ","],
+          ["=", ".", "0"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F18",
+      "type": "toggle"
+    },
+    {
+      "name": "Symbol",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          ["`", "]", "(", ")", ",", "."],
+          ["[", "!", "{", "}", ";", "?"],
+          ["#", "^", "=", "_", "$", "*"],
+          ["~", "<", "|", "-", ">", "/"],
+          ["..", "&", "'", "\"", "+", null]
+        ],
+        "thumbRows": [
+          ["\\", ".", "*"],
+          ["%", ":", "@"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          [],
+          ["`", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
+          ["\"", "⌫", "⇥", "⎵", "↵", null],
+          ["'", "⌦", "⇧⇥", "Insert", "⎋", null],
+          [null, "F20", null, null, null, null]
+        ],
+        "thumbRows": [
+          [],
+          [null, null, "🔒Sym"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F17",
+      "type": "toggle"
+    },
+    {
+      "name": "Mouse",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [],
+          [null, null, "Scroll←", "↑", "Scroll→", null],
+          [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
+          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
+          []
+        ],
+        "thumbRows": [
+          ["M Click", "☰", "Btn5"],
+          ["L Click", "R Click", "Btn4"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          [],
+          [null, "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
+          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
+          ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
+          [null, "←", "↓", "→", "M Click", "☰"]
+        ],
+        "thumbRows": [
+          [null, null, "Cut"],
+          ["Paste", "🔒Mouse", "Copy"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F16",
+      "type": "toggle"
+    },
+    {
+      "name": "System",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [],
+          [null, null, null, "⏸", "📷", "RGBToggle"],
+          [null, "Speed+", "Sat+", "Hue+", "Bright+", "Effect+"],
+          [null, "Speed-", "Sat-", "Hue-", "Bright-", "Effect-"],
+          [null, null, null, null, "SysRq", null]
+        ],
+        "thumbRows": [
+          ["🔒", "😴", "⏻"],
+          ["⇳", "NumLock", "⇪"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          [],
+          ["RGBToggle", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
+          ["Effect+", "Bright+", "Hue+", "Sat+", "Speed+", "🔒"],
+          ["Effect-", "Bright-", "Hue-", "Sat-", "Speed-", "😴"],
+          [null, "SysRq", "⇳", "NumLock", "⇪", "⏻"]
+        ],
+        "thumbRows": [
+          [null, "⏸", "🔒Sys"],
+          [null, "📷", "⏸"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F15",
+      "type": "toggle"
+    },
+    {
+      "name": "Lower",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [],
+          [],
+          ["ALT", null, null, null, null, null],
+          [],
+          [null, null, null, null, "🔒Emoji", null]
+        ],
+        "thumbRows": [
+          ["🔒Fn", null, null],
+          ["🔒Cur", "🔒Num", null]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [null, "NumLock", "/", "*", "-", null],
+          ["🗑", "7", "8", "9", "-", "/"],
+          ["(", "4", "5", "6", "+", "*"],
+          [")", "1", "2", "3", "⏎", "="],
+          ["0", "0", ",", ".", "⏎", null],
+          [null, "🔒World", null, null, null, null]
+        ],
+        "thumbRows": [
+          [null, null, "🔒Sys"],
+          [null, "🔒Mouse", "🔒Sym"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F14",
+      "type": "toggle"
+    },
+    {
+      "name": "Emoji",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          ["️☁️", "🌥", "⛅", "️🌤️", "☀️", null],
+          ["🌈", "🏻", "🏼", "🏽", "🏾", "🏿"],
+          ["⬅️", "🦲", "🦰", "🦱", "🦳", "➡️"],
+          ["♀️", "‍", "🏼", "♀️", "🦱", "♂️"],
+          ["👵", "👩", "👧", "👦", "👨", "👴"],
+          ["🎯", "📈", "👶", "🍼", "🔒Emoji", null]
+        ],
+        "thumbRows": [
+          ["️🏙️", "️🌇", "🌃"],
+          ["⚡⇧", "🌅", "🌄"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [null, "🌑", "🌘", "🌗", "🌖", "🌕"],
+          ["🎉", "❤️", "🔥", "💪", "🧗", "🤓"],
+          ["😂", "🙂", "🤩", "😉", "😨", "🤯"],
+          ["🫰", "👌", "🙏", "😅", "😞", "🤔"],
+          ["💁", "🙆", "🙇", "🙋", "🙅", "🤷"],
+          [null, "✅", "💯", "⚠️", "❌", "❓"]
+        ],
+        "thumbRows": [
+          ["🪄", "🚀", "✨"],
+          ["🙌", "☝️", "👍"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F13",
+      "type": "toggle"
+    }
+  ],
+  "defaultUserLayout": "GRAPHITE",
+  "homeRow": {
+    "rowIndex": 4,
+    "leftPosition": 2,
+    "rightPosition": 2
+  },
+  "actionMappings": {
+    "Sel All": "cmd+a",
+    "Sel Word": "alt+shift+right",
+    "Sel Line": "cmd+shift+right",
+    "Ext Word": "alt+shift+right",
+    "Ext Line": "shift+cmd+right",
+    "Clear": "left",
+    "Cut": "cmd+x",
+    "Copy": "cmd+c",
+    "Paste": "cmd+v",
+    "Undo": "cmd+z",
+    "Redo": "cmd+shift+z",
+    "🔍": "cmd+f",
+    "Home": "cmd+up",
+    "END": "cmd+down",
+    "End": "cmd+down",
+    "PgUp": "pageup",
+    "PgDn": "pagedown",
+    "Insert": "insert",
+    "Delete": "delete",
+    "⌫": "backspace",
+    "⌦": "delete",
+    "↵": "enter",
+    "⇥": "tab",
+    "⇧⇥": "shift+tab",
+    "⎋": "escape",
+    "⎵": "space",
+    "←": "left",
+    "→": "right",
+    "↑": "up",
+    "↓": "down",
+    "🔍←": "cmd+g",
+    "🔍→": "cmd+shift+g",
+    "⌃": "ctrl",
+    "⌥": "alt",
+    "⌘": "cmd",
+    "⇧": "shift",
+    "ALT": "alt",
+    "⌘L": "cmd+l",
+    "⌘K": "cmd+k",
+    "⌘H": "cmd+h",
+    "⌘⇧N": "cmd+shift+n",
+    "⌘⇧Y": "cmd+shift+y",
+    "⌘⇧A": "cmd+shift+a",
+    "⇪": "capslock",
+    "⇳": "f14",
+    "NumLock": "f6",
+    "⏻": "power",
+    "😴": "cmd+alt+eject",
+    "🔒": "cmd+ctrl+q",
+    "📷": "cmd+shift+4",
+    "🏠": "f3",
+    "🗑": "clear",
+    "🔒Fn": "layer_toggle_function",
+    "🔒Cur": "layer_toggle_cursor",
+    "🔒Num": "layer_toggle_number",
+    "🔒Sym": "layer_toggle_symbol",
+    "🔒Mouse": "layer_toggle_mouse",
+    "🔒Sys": "layer_toggle_system",
+    "🔒Emoji": "layer_toggle_emoji",
+    "🔒World": "layer_toggle_world",
+    "Lower": "layer_momentary_lower",
+    "Typing": "layer_base",
+    "MAGIC": "layer_magic",
+    "C_PREV": "f7",
+    "⏮": "f7",
+    "C_VOL_UP": "f12",
+    "🔊": "f12",
+    "C_BRI_UP": "f2",
+    "☀+": "f2",
+    "C_BRI_MAX": "shift+f2",
+    "☀⚡": "shift+f2",
+    "C_MUTE": "f10",
+    "🔇": "f10",
+    "C_BRI_AUTO": "f14",
+    "☀🤖": "f14",
+    "C_PP": "f8",
+    "⏯": "f8",
+    "C_MEDIA_HOME": "f3",
+    "C_PLAY": "f8",
+    "▶": "f8",
+    "C_EJECT": "f12",
+    "⏏": "f12",
+    "C_BRI_MIN": "shift+f1",
+    "☀0": "shift+f1",
+    "C_VOL_DN": "f11",
+    "🔉": "f11",
+    "C_STOP": "f6",
+    "⏹": "f6",
+    "C_NEXT": "f9",
+    "⏭": "f9",
+    "C_BRI_DN": "f1",
+    "☀-": "f1",
+    "L Click": "button1",
+    "R Click": "button2",
+    "M Click": "button3",
+    "Btn4": "button4",
+    "Btn5": "button5",
+    "☰": "button3",
+    "Slow": "mouseslow",
+    "Fast": "mousefast",
+    "Warp": "mousewarp",
+    "Scroll←": "scrollleft",
+    "Scroll→": "scrollright",
+    "Scroll↑": "scrollup",
+    "Scroll↓": "scrolldown"
+  }
+}

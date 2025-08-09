@@ -5,7 +5,7 @@
 //#define THUMB_HOLDING_TIME 170
 #define COMBO_FIRING_DECAY 65
 #define TAPPING_RESOLUTION 157
-#define SPACE_FORGIVENESS  // allow lingering taps on the space bar
+//#define SPACE_FORGIVENESS  // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
 #define ENABLE_MOUSE_KEYS  // requires HID_POINTING override to "y"
@@ -137,7 +137,7 @@
 #define KEY_RH_C4R4 E
 #define KEY_RH_C5R4 I
 #define KEY_RH_C6R4 0
-#define KEY_LH_C6R5 0
+#define KEY_LH_C6R5 14
 #define KEY_LH_C5R5 Q
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 M
@@ -154,7 +154,7 @@
 #define KEY_RH_C3R5 0
 #define KEY_RH_C4R5 0
 #define KEY_RH_C5R5 0
-#define KEY_RH_C6R5 0
+#define KEY_RH_C6R5 14
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 0
 #define KEY_LH_C4R6 LPAR
@@ -2760,6 +2760,7 @@ behaviors {
   };
   #define RightMiddyIndex right_middy_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
 
+
   //
   // Thumb cluster hold-tap keys for Miryoku layers
   //
@@ -2838,6 +2839,168 @@ behaviors {
     #ifdef SPACE_FORGIVENESS
     retro-tap; // tap on standalone hold
     #endif
+  };
+
+
+  // Generated behavior for LAYER_Function
+  function_with_lg_la_lc_ls_f20: function_with_lg_la_lc_ls_f20 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F20)))) &macro_press &mo LAYER_Function &macro_pause_for_release &macro_release &mo LAYER_Function &macro_tap &kp LG(LA(LC(LS(F20))))>;
+  };
+
+  thumb_function: thumb_function {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&function_with_lg_la_lc_ls_f20>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_Cursor
+  cursor_with_lg_la_lc_ls_f19: cursor_with_lg_la_lc_ls_f19 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F19)))) &macro_press &mo LAYER_Cursor &macro_pause_for_release &macro_release &mo LAYER_Cursor &macro_tap &kp LG(LA(LC(LS(F19))))>;
+  };
+
+  thumb_cursor: thumb_cursor {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&cursor_with_lg_la_lc_ls_f19>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_Number
+  number_with_lg_la_lc_ls_f18: number_with_lg_la_lc_ls_f18 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F18)))) &macro_press &mo LAYER_Number &macro_pause_for_release &macro_release &mo LAYER_Number &macro_tap &kp LG(LA(LC(LS(F18))))>;
+  };
+
+  thumb_number: thumb_number {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&number_with_lg_la_lc_ls_f18>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated space behavior for LAYER_Symbol
+  symbol_space_with_lg_la_lc_ls_f17: symbol_space_with_lg_la_lc_ls_f17 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F17)))) &macro_press &mo LAYER_Symbol&macro_pause_for_release &macro_release &mo LAYER_Symbol &macro_tap &kp LG(LA(LC(LS(F17))))>;
+  };
+
+  space_symbol: space_symbol {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = SPACE_HOLDING_TYPE;
+      tapping-term-ms = <SPACE_HOLDING_TIME>;
+      quick-tap-ms = <SPACE_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&symbol_space_with_lg_la_lc_ls_f17>, <&kp>;
+      #ifdef SPACE_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_Mouse
+  mouse_with_lg_la_lc_ls_f16: mouse_with_lg_la_lc_ls_f16 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F16)))) &macro_press &mo LAYER_Mouse &macro_pause_for_release &macro_release &mo LAYER_Mouse &macro_tap &kp LG(LA(LC(LS(F16))))>;
+  };
+
+  thumb_mouse: thumb_mouse {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&mouse_with_lg_la_lc_ls_f16>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_System
+  system_with_lg_la_lc_ls_f15: system_with_lg_la_lc_ls_f15 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F15)))) &macro_press &mo LAYER_System &macro_pause_for_release &macro_release &mo LAYER_System &macro_tap &kp LG(LA(LC(LS(F15))))>;
+  };
+
+  thumb_system: thumb_system {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&system_with_lg_la_lc_ls_f15>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_Lower
+  lower_with_lg_la_lc_ls_f14: lower_with_lg_la_lc_ls_f14 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F14)))) &macro_press &mo LAYER_Lower &macro_pause_for_release &macro_release &mo LAYER_Lower &macro_tap &kp LG(LA(LC(LS(F14))))>;
+  };
+
+  thumb_lower: thumb_lower {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&lower_with_lg_la_lc_ls_f14>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
+  };
+  // Generated behavior for LAYER_Emoji
+  emoji_with_lg_la_lc_ls_f13: emoji_with_lg_la_lc_ls_f13 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      wait-ms = <0>;
+      tap-ms = <0>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(F13)))) &macro_press &mo LAYER_Emoji &macro_pause_for_release &macro_release &mo LAYER_Emoji &macro_tap &kp LG(LA(LC(LS(F13))))>;
+  };
+
+  thumb_emoji: thumb_emoji {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = THUMB_HOLDING_TYPE;
+      tapping-term-ms = <THUMB_HOLDING_TIME>;
+      quick-tap-ms = <THUMB_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&emoji_with_lg_la_lc_ls_f13>, <&kp>;
+      #ifdef THUMB_FORGIVENESS
+      retro-tap;
+      #endif
   };
 
   //
