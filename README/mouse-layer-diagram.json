@@ -134,18 +134,20 @@
     "",
     "",
     {
-      "x": 7.25
+      "x": 7.25,
+      "f": 3
     },
     "",
-    "",
-    "",
-    ""
+    "Cut<br><i class='fa fa-cut'></i>",
+    "Copy <i class='fa fa-copy'></i>",
+    "Paste <i class='fa fa-paste'></i>"
   ],
   [
     {
       "y": -0.5,
       "t": "#9E9E9E",
       "g": false,
+      "f": 5,
       "d": true
     },
     "R2",
@@ -200,28 +202,20 @@
     },
     "",
     {
-      "x": 7.25
-    },
-    "",
-    {
-      "c": "#D7CCC8",
+      "x": 8.25,
+      "c": "#ffecb3",
       "g": false,
-      "p": "SPACE",
-      "a": 5,
-      "fa": [
-        2
-      ]
+      "a": 5
     },
-    "sticky\n\n\n\nShift\n\nShift",
-    "sticky\n\n\n\nCtrl\n\nCtrl",
-    "sticky\n\n\n\nAlt\n\nAlt"
+    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
+    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick"
   ],
   [
     {
       "y": -0.5,
       "c": "#cccccc",
       "t": "#9E9E9E",
-      "p": "CHICKLET",
       "a": 7,
       "f": 5,
       "d": true
@@ -238,35 +232,13 @@
     },
     "",
     {
-      "x": 15.25,
-      "c": "#D7CCC8",
-      "g": false,
-      "p": "SPACE",
-      "a": 5,
-      "f": 3,
-      "fa": [
-        2
-      ]
+      "x": 16.25,
+      "f": 3
     },
-    "sticky\n\n\n\nWin\n\nWin",
+    "",
     {
-      "c": "#d1c4e9",
-      "p": "CHICKLET",
-      "fa": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ]
-    },
-    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
-    {
-      "c": "#cccccc",
       "t": "#9E9E9E",
-      "a": 7,
+      "g": false,
       "f": 5,
       "d": true
     },
@@ -326,7 +298,10 @@
     },
     "<i class='fa fa-barcode'></i>\nwarp\n\n\n\n\nSpeed",
     {
-      "x": 1,
+      "c": "#dcedc8"
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
+    {
       "c": "#cccccc",
       "t": "#9E9E9E",
       "a": 7,
@@ -355,21 +330,23 @@
       "x": 7.25
     },
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-left'></i>\n\n\n\n\nScroll",
     {
-      "c": "#BBDEFB"
+      "c": "#D7CCC8",
+      "p": "SPACE",
+      "fa": [
+        2
+      ]
     },
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
-    {
-      "c": "#dcedc8"
-    },
-    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll"
+    "sticky\n\n\n\nShift\n\nShift",
+    "sticky\n\n\n\nCtrl\n\nCtrl",
+    "sticky\n\n\n\nAlt\n\nAlt"
   ],
   [
     {
       "y": -0.5,
       "c": "#cccccc",
       "t": "#9E9E9E",
+      "p": "CHICKLET",
       "a": 7,
       "f": 5,
       "d": true
@@ -389,11 +366,20 @@
     "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-down'></i>\n\n\n\n\nScroll",
     {
       "x": 15.25,
-      "c": "#ffecb3"
+      "c": "#D7CCC8",
+      "p": "SPACE",
+      "fa": [
+        2
+      ]
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nleft\n\n\n\n\nClick",
+    "sticky\n\n\n\nWin\n\nWin",
     {
-      "x": 1,
+      "c": "#dcedc8",
+      "p": "CHICKLET",
+      "f": 3
+    },
+    "<i class='fa fa-film'></i>\n<i class='fa fa-chevron-circle-right'></i>\n\n\n\n\nScroll",
+    {
       "c": "#cccccc",
       "t": "#9E9E9E",
       "a": 7,
@@ -412,8 +398,8 @@
       "f": 3
     },
     "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-left'></i>\n\n\n\n\nPoint",
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint",
-    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint"
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-up'></i>\n\n\n\n\nPoint",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-down'></i>\n\n\n\n\nPoint"
   ],
   [
     {
@@ -433,12 +419,24 @@
     "\n\n\n\nLower",
     {
       "x": 16.25,
-      "c": "#ffecb3",
+      "c": "#BBDEFB",
       "g": false,
       "a": 5
     },
-    "<i class='fa fa-hand-pointer-o'></i>\nright\n\n\n\n\nClick",
-    "<i class='fa fa-hand-pointer-o'></i>\nmiddle\n\n\n\n\nClick",
+    "<i class='fa fa-mouse-pointer motif'></i>\n<i class='fa fa-arrow-circle-right'></i>\n\n\n\n\nPoint",
+    {
+      "c": "#d1c4e9",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "<i class='fa fa-bars'></i>\nmenu\n\n\n\n\nContext",
     {
       "c": "#cccccc",
       "t": "#9E9E9E",
@@ -497,15 +495,16 @@
     {
       "rx": 0.25,
       "ry": 0,
-      "y": 4.5,
-      "x": 19,
+      "y": 3,
+      "x": 14,
       "c": "#ffecb3"
     },
     "<i class='fa fa-hand-pointer-o'></i>\n#4\n\n\n\n\nClick"
   ],
   [
     {
-      "x": 19
+      "y": -0.5,
+      "x": 18
     },
     "<i class='fa fa-hand-pointer-o'></i>\n#5\n\n\n\n\nClick"
   ],
