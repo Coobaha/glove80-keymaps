@@ -1,4 +1,4 @@
-#!/usr/bin/env -S uv run --script
+#!/usr/bin/env -S uv run
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
@@ -100,6 +100,7 @@ ZMK_KEY_MAPPING = {
     'KP_PLUS': '+', 'KP_ENTER': '⏎', 'KP_DOT': '.', 'KP_COMMA': ',',
     'KP_EQUAL': '=', 'KP_N0': '0', 'KP_N1': '1', 'KP_N2': '2', 'KP_N3': '3',
     'KP_N4': '4', 'KP_N5': '5', 'KP_N6': '6', 'KP_N7': '7', 'KP_N8': '8', 'KP_N9': '9',
+    'KP_CLEAR': 'Clear', 'KP_LPAR': '(', 'KP_RPAR': ')',
 
     # System keys - Icons where possible
     'CAPS': '⇪', 'SLCK': '⇳', 'PAUSE_BREAK': '⏸',
@@ -147,6 +148,13 @@ def add_spaces_to_long_words(text: str) -> str:
         'CapsLock': '⇪',
         'PrintScreen': '📷',
 
+        # RGB controls - compact forms
+        'Hue+': 'H+', 'Hue-': 'H-',
+        'Sat+': 'S+', 'Sat-': 'S-',
+        'Bright+': 'L+', 'Bright-': 'L-',
+        'Speed+': 'Sp+', 'Speed-': 'Sp-',
+        'Effect+': 'E+', 'Effect-': 'E-',
+
         # Find operations
         'FINDPREV': '🔍←',
         'FINDNEXT': '🔍→',
@@ -184,6 +192,24 @@ def convert_zmk_key(key_data: Dict[str, Any], layer_name: str = '') -> str:
             # Handle simple shift combinations FIRST (LS(G) -> G or LS(TAB) -> ⇧Tab)
             if key_code == 'LS' and params[0].get('params'):
                 inner_key = params[0]['params'][0].get('value', '')
+
+                # Shifted number keys -> punctuation
+                shifted_numbers = {
+                    'N1': '!', 'N2': '@', 'N3': '#', 'N4': '$', 'N5': '%',
+                    'N6': '^', 'N7': '&', 'N8': '*', 'N9': '(', 'N0': ')'
+                }
+                if inner_key in shifted_numbers:
+                    return shifted_numbers[inner_key]
+
+                # Shifted symbol keys -> alternate punctuation
+                shifted_symbols = {
+                    'MINUS': '_', 'EQUAL': '+', 'LBKT': '{', 'RBKT': '}',
+                    'BSLH': '|', 'SEMI': ':', 'SQT': '"', 'GRAVE': '~',
+                    'COMMA': '<', 'DOT': '>', 'FSLH': '?'
+                }
+                if inner_key in shifted_symbols:
+                    return shifted_symbols[inner_key]
+
                 # For letters, LS(G) should render as just G since it's a capital letter
                 if inner_key in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
                                  'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']:
@@ -231,10 +257,46 @@ def convert_zmk_key(key_data: Dict[str, Any], layer_name: str = '') -> str:
                 return ''.join(mod_chain) if mod_chain else 'MOD'
             elif key_code == 'RS' and params[0].get('params'):
                 inner_key = params[0]['params'][0].get('value', '')
+
+                # Shifted number keys -> punctuation (same as LS)
+                shifted_numbers = {
+                    'N1': '!', 'N2': '@', 'N3': '#', 'N4': '$', 'N5': '%',
+                    'N6': '^', 'N7': '&', 'N8': '*', 'N9': '(', 'N0': ')'
+                }
+                if inner_key in shifted_numbers:
+                    return shifted_numbers[inner_key]
+
+                # Shifted symbol keys -> alternate punctuation (same as LS)
+                shifted_symbols = {
+                    'MINUS': '_', 'EQUAL': '+', 'LBKT': '{', 'RBKT': '}',
+                    'BSLH': '|', 'SEMI': ':', 'SQT': '"', 'GRAVE': '~',
+                    'COMMA': '<', 'DOT': '>', 'FSLH': '?'
+                }
+                if inner_key in shifted_symbols:
+                    return shifted_symbols[inner_key]
+
                 return ZMK_KEY_MAPPING.get(inner_key, inner_key)
             # Handle string-based combinations
             elif key_code.startswith('LS(') and key_code.endswith(')'):
                 inner_key = key_code[3:-1]
+
+                # Shifted number keys -> punctuation
+                shifted_numbers = {
+                    'N1': '!', 'N2': '@', 'N3': '#', 'N4': '$', 'N5': '%',
+                    'N6': '^', 'N7': '&', 'N8': '*', 'N9': '(', 'N0': ')'
+                }
+                if inner_key in shifted_numbers:
+                    return shifted_numbers[inner_key]
+
+                # Shifted symbol keys -> alternate punctuation
+                shifted_symbols = {
+                    'MINUS': '_', 'EQUAL': '+', 'LBKT': '{', 'RBKT': '}',
+                    'BSLH': '|', 'SEMI': ':', 'SQT': '"', 'GRAVE': '~',
+                    'COMMA': '<', 'DOT': '>', 'FSLH': '?'
+                }
+                if inner_key in shifted_symbols:
+                    return shifted_symbols[inner_key]
+
                 if inner_key == 'TAB':
                     return '⇧⇥'  # Use compact symbols
                 elif inner_key in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
@@ -243,6 +305,24 @@ def convert_zmk_key(key_data: Dict[str, Any], layer_name: str = '') -> str:
                 return ZMK_KEY_MAPPING.get(inner_key, inner_key)
             elif key_code.startswith('RS(') and key_code.endswith(')'):
                 inner_key = key_code[3:-1]
+
+                # Shifted number keys -> punctuation (same as LS)
+                shifted_numbers = {
+                    'N1': '!', 'N2': '@', 'N3': '#', 'N4': '$', 'N5': '%',
+                    'N6': '^', 'N7': '&', 'N8': '*', 'N9': '(', 'N0': ')'
+                }
+                if inner_key in shifted_numbers:
+                    return shifted_numbers[inner_key]
+
+                # Shifted symbol keys -> alternate punctuation (same as LS)
+                shifted_symbols = {
+                    'MINUS': '_', 'EQUAL': '+', 'LBKT': '{', 'RBKT': '}',
+                    'BSLH': '|', 'SEMI': ':', 'SQT': '"', 'GRAVE': '~',
+                    'COMMA': '<', 'DOT': '>', 'FSLH': '?'
+                }
+                if inner_key in shifted_symbols:
+                    return shifted_symbols[inner_key]
+
                 return ZMK_KEY_MAPPING.get(inner_key, inner_key)
 
             result = ZMK_KEY_MAPPING.get(key_code, key_code)
@@ -305,28 +385,32 @@ def convert_zmk_key(key_data: Dict[str, Any], layer_name: str = '') -> str:
         # RGB underglow controls - extract the command from params
         if params and isinstance(params[0], dict):
             rgb_cmd = params[0].get('value', '')
+            result = None
             if rgb_cmd == 'RGB_TOG':
-                return 'RGBToggle'
+                result = 'RGBToggle'
             elif rgb_cmd == 'RGB_HUI':
-                return 'Hue+'
+                result = 'Hue+'
             elif rgb_cmd == 'RGB_HUD':
-                return 'Hue-'
+                result = 'Hue-'
             elif rgb_cmd == 'RGB_SAI':
-                return 'Sat+'
+                result = 'Sat+'
             elif rgb_cmd == 'RGB_SAD':
-                return 'Sat-'
+                result = 'Sat-'
             elif rgb_cmd == 'RGB_BRI':
-                return 'Bright+'
+                result = 'Bright+'
             elif rgb_cmd == 'RGB_BRD':
-                return 'Bright-'
+                result = 'Bright-'
             elif rgb_cmd == 'RGB_SPI':
-                return 'Speed+'
+                result = 'Speed+'
             elif rgb_cmd == 'RGB_SPD':
-                return 'Speed-'
+                result = 'Speed-'
             elif rgb_cmd == 'RGB_EFF':
-                return 'Effect+'
+                result = 'Effect+'
             elif rgb_cmd == 'RGB_EFR':
-                return 'Effect-'
+                result = 'Effect-'
+            else:
+                result = 'RGB'
+            return add_spaces_to_long_words(result)
         return 'RGB'
     elif value == 'Custom':
         # Custom behavior - extract from params
@@ -395,7 +479,7 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
         elif 'left_ringy_tap' in behavior:
             return 'F1'  # Default for left ring finger on function row
         elif 'left_middy_tap' in behavior:
-            return 'F2'  # Default for left middle finger on function row  
+            return 'F2'  # Default for left middle finger on function row
         elif 'left_index_tap' in behavior:
             return 'F3'  # Default for left index finger on function row
         elif 'right_pinky_tap' in behavior:
@@ -403,7 +487,7 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
         elif 'right_ringy_tap' in behavior:
             return 'F9'  # Default for right ring finger on function row
         elif 'right_middy_tap' in behavior:
-            return 'F8'  # Default for right middle finger on function row  
+            return 'F8'  # Default for right middle finger on function row
         elif 'right_index_tap' in behavior:
             return 'F7'  # Default for right index finger on function row
         raise ValueError(f"Unknown tap behavior: {behavior}")
@@ -480,15 +564,23 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
     elif '&mo ' in behavior:
         # Layer access - extract layer name
         if 'LAYER_MouseSlow' in behavior:
-            return 'SlowMouse'
+            return 'Slow'
         elif 'LAYER_MouseFast' in behavior:
-            return 'FastMouse'
+            return 'Fast'
         elif 'LAYER_MouseWarp' in behavior:
-            return 'WarpMouse'
+            return 'Warp'
+        elif 'LAYER_MouseFine' in behavior:
+            return 'Fine'
         elif 'LAYER_' in behavior:
-            # Extract layer name
+            # Extract layer name - use shorter names where possible
             layer_part = behavior.split('LAYER_')[1].split()[0]
-            return layer_part[:8]  # Truncate long names
+            # Provide clean abbreviations for common layers
+            abbrev = {
+                'Function': 'Fn', 'Cursor': 'Cur', 'Number': 'Num',
+                'Symbol': 'Sym', 'Mouse': 'Mouse', 'System': 'Sys',
+                'Emoji': 'Emoji', 'World': 'World'
+            }
+            return abbrev.get(layer_part, layer_part[:8])  # Truncate others to 8 chars
         return 'Layer'
     elif '&sk' in behavior:
         # Sticky keys - use lightning bolt ⚡ like your Dart code
@@ -545,30 +637,33 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
             return f'🔒{layer_part[:4]}'  # Truncate to 4 chars
         return '🔄'
     elif '&rgb_ug' in behavior:
-        # RGB underglow controls
+        # RGB underglow controls - use compact forms via add_spaces_to_long_words
+        result = None
         if 'RGB_TOG' in behavior:
-            return '🌈'
+            result = 'RGBToggle'
         elif 'RGB_HUI' in behavior:
-            return 'Hue+'
+            result = 'Hue+'
         elif 'RGB_HUD' in behavior:
-            return 'Hue-'
+            result = 'Hue-'
         elif 'RGB_SAI' in behavior:
-            return 'Sat+'
+            result = 'Sat+'
         elif 'RGB_SAD' in behavior:
-            return 'Sat-'
+            result = 'Sat-'
         elif 'RGB_BRI' in behavior:
-            return 'Bright+'
+            result = 'Bright+'
         elif 'RGB_BRD' in behavior:
-            return 'Bright-'
+            result = 'Bright-'
         elif 'RGB_SPI' in behavior:
-            return 'Speed+'
+            result = 'Speed+'
         elif 'RGB_SPD' in behavior:
-            return 'Speed-'
+            result = 'Speed-'
         elif 'RGB_EFF' in behavior:
-            return 'Effect+'
+            result = 'Effect+'
         elif 'RGB_EFR' in behavior:
-            return 'Effect-'
-        return 'RGB'
+            result = 'Effect-'
+        else:
+            result = 'RGB'
+        return add_spaces_to_long_words(result)
     elif '&msc' in behavior:
         # Mouse scroll - extract the direction
         if 'SCRL_UP' in behavior:
@@ -712,7 +807,7 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
         # Handle special preset behaviors first
         preset_mappings = {
             'skin_tone_preset': '🏼',  # medium_light_skin_tone
-            'gender_sign_preset': '♀️',  # female_sign 
+            'gender_sign_preset': '♀️',  # female_sign
             'hair_style_preset': '🦱',  # curly_hair
         }
         if behavior_name in preset_mappings:
@@ -769,14 +864,14 @@ def parse_custom_behavior_properly(behavior_str: str, layer_name: str = '') -> s
             letter_orig = behavior_name.replace('_base', '')
             letter_upper = letter_orig.upper()
             letter_lower = letter_orig.lower()
-            
+
             # Try both uppercase and lowercase (for letters vs words like "sign")
             letter = None
             if letter_upper in world_data['transforms']:
                 letter = letter_upper
             elif letter_lower in world_data['transforms']:
                 letter = letter_lower
-            
+
             if letter:
                 base_transform = world_data['transforms'][letter].get('base')
                 if base_transform and 'characters' in world_data:
@@ -1186,7 +1281,7 @@ def scan_generated_display_names(data):
 def extract_custom_shift_mappings_from_emoji_yaml():
     """Extract custom shift mappings from emoji.yaml characters section"""
     shift_mappings = {}
-    
+
     try:
         import yaml
         with open('emoji.yaml', 'r', encoding='utf-8') as f:
@@ -1197,26 +1292,26 @@ def extract_custom_shift_mappings_from_emoji_yaml():
     except FileNotFoundError as e:
         print(f"Warning: emoji.yaml not found for shift mapping: {e}")
         return {}
-    
+
     # Extract shift mappings from characters section
     characters = emoji_data.get('characters', {})
-    
+
     for group_name, group_items in characters.items():
         for item_name, variants in group_items.items():
             if isinstance(variants, dict) and len(variants) == 2:
                 # Get the two variants - first is unshifted, second is shifted
                 variant_keys = list(variants.keys())
                 variant_values = list(variants.values())
-                
+
                 if len(variant_values) == 2:
                     unshifted_emoji = variant_values[0]
                     shifted_emoji = variant_values[1]
-                    
+
                     # Add to shift mappings
                     shift_mappings[unshifted_emoji] = shifted_emoji
-                    
+
                     print(f"🔄 Emoji shift: {unshifted_emoji} → {shifted_emoji} ({group_name}.{item_name}: {variant_keys[0]} → {variant_keys[1]})")
-    
+
     print(f"🔍 Found {len(shift_mappings)} emoji shift mappings")
     return shift_mappings
 
@@ -1442,7 +1537,7 @@ def main():
         # Generate action mappings from actual keymap data
         print("🔍 Scanning keymap for consumer codes...")
         action_mappings = extract_action_mappings_from_keymap(keymap)
-        
+
         # Extract custom shift mappings from emoji.yaml
         print("🔍 Scanning emoji.yaml for shift mappings...")
         custom_shift_mappings = extract_custom_shift_mappings_from_emoji_yaml()
@@ -1568,7 +1663,7 @@ def main():
             },
             "actionMappings": dict(sorted(action_mappings.items()))
         }
-        
+
         # Add customShiftMappings if any were found
         if custom_shift_mappings:
             config["customShiftMappings"] = dict(sorted(custom_shift_mappings.items()))

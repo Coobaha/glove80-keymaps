@@ -6,21 +6,21 @@
       "leftHand": {
         "mainRows": [
           ["F1", "F2", "F3", "F4", "F5", null],
-          ["+", "1", "2", "3", "4", "5"],
+          ["=", "1", "2", "3", "4", "5"],
           ["`", "B", "L", "D", "W", "Z"],
-          ["=", "N", "R", "T", "S", "G"],
+          ["⌥⌃⇧⌘", "N", "R", "T", "S", "G"],
           ["LOWER", "Q", "X", "M", "C", "V"],
-          ["MAGIC", "\\", "(", ")", "`", null]
+          ["MAGIC", "`", "[", "]", "\\", null]
         ],
         "thumbRows": [
-          ["⎋", "[", "]"],
+          ["⎋", "(", ")"],
           ["⌫", "Delete", "Insert"]
         ]
       },
       "rightHand": {
         "mainRows": [
           [null, "F6", "F7", "F8", "F9", "F10"],
-          ["6", "7", "8", "9", "0", "\\"],
+          ["6", "7", "8", "9", "0", "-"],
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
           ["K", "P", ".", "-", "/", "LOWER"],
@@ -109,8 +109,8 @@
           [null, "⎋", "Insert", "⇧⇥", "⌦", null],
           [null, "↵", "⎵", "⇥", "⌫", "F17"],
           ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "F18"],
-          ["E", "Sel All", "Sel Line", "Sel Word", "🔍", "F19"],
-          ["_", "Undo", "Redo", "🔍←", "🔍→", null]
+          ["_", "Sel All", "Sel Line", "Sel Word", "🔍", "F19"],
+          [null, "Undo", "Redo", "🔍←", "🔍→", null]
         ],
         "thumbRows": [
           [],
@@ -124,7 +124,7 @@
           ["G", "7", "8", "9", ":", "%"],
           ["K", "4", "5", "6", "-", "+"],
           ["J", "1", "2", "3", "/", "*"],
-          [null, "[", "(", ")", "]", "@"]
+          [null, "(", "[", "]", ")", "@"]
         ],
         "thumbRows": [
           ["<", ">", ","],
@@ -140,11 +140,11 @@
       "leftHand": {
         "mainRows": [
           [],
-          ["`", "[", "{", "}", "]", "."],
-          ["!", ",", "(", ")", ";", "?"],
+          ["`", ",", "(", ")", ";", "."],
+          ["!", "[", "{", "}", "]", "?"],
           ["#", "^", "=", "_", "$", "*"],
           ["~", "<", "|", "-", ">", "/"],
-          ["..", "&", "'", "\"", "+", null]
+          ["..", "&", "'", "⇧SINGLE_QUOTE", "+", null]
         ],
         "thumbRows": [
           ["\\", ".", "*"],
@@ -155,9 +155,9 @@
         "mainRows": [
           [],
           [],
-          ["`", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
-          ["\"", "⌫", "⇥", "⎵", "↵", null],
-          ["'", "⌦", "⇧⇥", "Insert", "⎋", null],
+          ["`", "⌦", "⇧⇥", "Insert", "⎋", null],
+          ["⇧SINGLE_QUOTE", "⌫", "⇥", "⎵", "↵", null],
+          ["'", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
           [null, "F20", null, null, null, null]
         ],
         "thumbRows": [
@@ -175,10 +175,10 @@
         "mainRows": [
           [],
           [],
-          [null, null, "Scroll←", "↑", "Scroll→", null],
-          [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
-          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
-          []
+          [null, null, "Scroll", "↑", "Scroll", null],
+          [null, "Scroll", "←", "↓", "→", "Scroll"],
+          [null, "Scroll", "Cut", "Copy", "Paste", "Scroll"],
+          [null, "Warp", "Fine", "Slow", "Fast", null]
         ],
         "thumbRows": [
           ["M Click", "☰", "Btn5"],
@@ -189,14 +189,14 @@
         "mainRows": [
           [],
           [],
-          [null, "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
-          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
-          ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
-          [null, "←", "↓", "→", "M Click", "☰"]
+          ["Btn4", "L Click", "M Click", "R Click", "Btn5", null],
+          ["Scroll", "Fast", "Slow", "Fine", "Warp", "Scroll"],
+          ["Scroll", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", "Scroll"],
+          [null, "←", "↑", "↓", "→", "☰"]
         ],
         "thumbRows": [
-          [null, null, "Cut"],
-          ["Paste", "🔒Mouse", "Copy"]
+          ["Cut", "Copy", "Paste"],
+          [null, "🔒Mouse", null]
         ]
       },
       "trigger": "cmd+alt+ctrl+shift+F16",
@@ -209,9 +209,9 @@
         "mainRows": [
           [],
           [],
-          [null, null, null, "⏸", "📷", "RGBToggle"],
-          [null, "Speed+", "Sat+", "Hue+", "Bright+", "Effect+"],
-          [null, "Speed-", "Sat-", "Hue-", "Bright-", "Effect-"],
+          [null, "Sp+", "S+", "H+", "L+", "E+"],
+          [null, "Sp-", "S-", "H-", "L-", "E-"],
+          [null, null, null, "⏸", "📷", "🌈"],
           [null, null, null, null, "SysRq", null]
         ],
         "thumbRows": [
@@ -223,13 +223,13 @@
         "mainRows": [
           [],
           [],
-          ["RGBToggle", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
-          ["Effect+", "Bright+", "Hue+", "Sat+", "Speed+", "🔒"],
-          ["Effect-", "Bright-", "Hue-", "Sat-", "Speed-", "😴"],
+          ["E+", "L+", "H+", "S+", "Sp+", null],
+          ["E-", "L-", "H-", "S-", "Sp-", "🔒"],
+          ["🌈", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", "😴"],
           [null, "SysRq", "⇳", "NumLock", "⇪", "⏻"]
         ],
         "thumbRows": [
-          [null, "⏸", "🔒Sys"],
+          [null, null, "🔒Sys"],
           [null, "📷", "⏸"]
         ]
       },
@@ -244,7 +244,7 @@
           [],
           [],
           [],
-          ["ALT", null, null, null, "⌃⌘⌥⇧S", null],
+          ["ALT", null, null, null, null, null],
           [],
           [null, null, null, null, "🔒Emoji", null]
         ],
@@ -256,7 +256,7 @@
       "rightHand": {
         "mainRows": [
           [null, "NumLock", "/", "*", "-", null],
-          ["🗑", "7", "8", "9", "-", "/"],
+          ["Clear", "7", "8", "9", "-", "/"],
           ["(", "4", "5", "6", "+", "*"],
           [")", "1", "2", "3", "⏎", "="],
           ["0", "0", ",", ".", "⏎", null],
@@ -278,13 +278,13 @@
           ["️☁️", "🌥", "⛅", "️🌤️", "☀️", null],
           ["🌈", "🏻", "🏼", "🏽", "🏾", "🏿"],
           ["⬅️", "🦲", "🦰", "🦱", "🦳", "➡️"],
-          ["♀️", "‍", "🏼", "♀️", "🦱", "♂️"],
-          ["👵", "👩", "👧", "👦", "👨", "👴"],
+          ["♂️", "🦱", "🏼", "♀️", "⚡⇧", "♀️"],
+          ["👴", "👨", "👦", "👧", "👩", "👵"],
           ["🎯", "📈", "👶", "🍼", "🔒Emoji", null]
         ],
         "thumbRows": [
           ["️🏙️", "️🌇", "🌃"],
-          ["⚡⇧", "🌅", "🌄"]
+          ["‍", "🌅", "🌄"]
         ]
       },
       "rightHand": {
