@@ -137,7 +137,7 @@
 #define KEY_RH_C4R4 E
 #define KEY_RH_C5R4 I
 #define KEY_RH_C6R4 0
-#define KEY_LH_C6R5 14
+#define KEY_LH_C6R5 0
 #define KEY_LH_C5R5 Q
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 M
@@ -154,7 +154,7 @@
 #define KEY_RH_C3R5 0
 #define KEY_RH_C4R5 0
 #define KEY_RH_C5R5 0
-#define KEY_RH_C6R5 14
+#define KEY_RH_C6R5 0
 #define KEY_LH_C6R6 0
 #define KEY_LH_C5R6 0
 #define KEY_LH_C4R6 LPAR
@@ -2963,12 +2963,12 @@ behaviors {
       #endif
   };
   // Generated behavior for LAYER_Lower
-  lower_with_lg_la_lc_ls_f14: lower_with_lg_la_lc_ls_f14 {
+  lower_with_lg_la_lc_ls_equal: lower_with_lg_la_lc_ls_equal {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       wait-ms = <0>;
       tap-ms = <0>;
-      bindings = <&macro_tap &kp LG(LA(LC(LS(F14)))) &macro_press &mo LAYER_Lower &macro_pause_for_release &macro_release &mo LAYER_Lower &macro_tap &kp LG(LA(LC(LS(F14))))>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(EQUAL)))) &macro_press &mo LAYER_Lower &macro_pause_for_release &macro_release &mo LAYER_Lower &macro_tap &kp LG(LA(LC(LS(EQUAL))))>;
   };
 
   thumb_lower: thumb_lower {
@@ -2977,18 +2977,18 @@ behaviors {
       tapping-term-ms = <THUMB_HOLDING_TIME>;
       quick-tap-ms = <THUMB_REPEAT_DECAY>;
       #binding-cells = <2>;
-      bindings = <&lower_with_lg_la_lc_ls_f14>, <&kp>;
+      bindings = <&lower_with_lg_la_lc_ls_equal>, <&kp>;
       #ifdef THUMB_FORGIVENESS
       retro-tap;
       #endif
   };
   // Generated behavior for LAYER_Emoji
-  emoji_with_lg_la_lc_ls_f13: emoji_with_lg_la_lc_ls_f13 {
+  emoji_with_lg_la_lc_ls_grave: emoji_with_lg_la_lc_ls_grave {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       wait-ms = <0>;
       tap-ms = <0>;
-      bindings = <&macro_tap &kp LG(LA(LC(LS(F13)))) &macro_press &mo LAYER_Emoji &macro_pause_for_release &macro_release &mo LAYER_Emoji &macro_tap &kp LG(LA(LC(LS(F13))))>;
+      bindings = <&macro_tap &kp LG(LA(LC(LS(GRAVE)))) &macro_press &mo LAYER_Emoji &macro_pause_for_release &macro_release &mo LAYER_Emoji &macro_tap &kp LG(LA(LC(LS(GRAVE))))>;
   };
 
   thumb_emoji: thumb_emoji {
@@ -2997,7 +2997,7 @@ behaviors {
       tapping-term-ms = <THUMB_HOLDING_TIME>;
       quick-tap-ms = <THUMB_REPEAT_DECAY>;
       #binding-cells = <2>;
-      bindings = <&emoji_with_lg_la_lc_ls_f13>, <&kp>;
+      bindings = <&emoji_with_lg_la_lc_ls_grave>, <&kp>;
       #ifdef THUMB_FORGIVENESS
       retro-tap;
       #endif

@@ -1183,6 +1183,44 @@ def scan_generated_display_names(data):
     return display_names
 
 
+def extract_custom_shift_mappings_from_emoji_yaml():
+    """Extract custom shift mappings from emoji.yaml characters section"""
+    shift_mappings = {}
+    
+    try:
+        import yaml
+        with open('emoji.yaml', 'r', encoding='utf-8') as f:
+            emoji_data = yaml.safe_load(f)
+    except ImportError as e:
+        print(f"Warning: PyYAML not available for emoji shift mapping: {e}")
+        return {}
+    except FileNotFoundError as e:
+        print(f"Warning: emoji.yaml not found for shift mapping: {e}")
+        return {}
+    
+    # Extract shift mappings from characters section
+    characters = emoji_data.get('characters', {})
+    
+    for group_name, group_items in characters.items():
+        for item_name, variants in group_items.items():
+            if isinstance(variants, dict) and len(variants) == 2:
+                # Get the two variants - first is unshifted, second is shifted
+                variant_keys = list(variants.keys())
+                variant_values = list(variants.values())
+                
+                if len(variant_values) == 2:
+                    unshifted_emoji = variant_values[0]
+                    shifted_emoji = variant_values[1]
+                    
+                    # Add to shift mappings
+                    shift_mappings[unshifted_emoji] = shifted_emoji
+                    
+                    print(f"🔄 Emoji shift: {unshifted_emoji} → {shifted_emoji} ({group_name}.{item_name}: {variant_keys[0]} → {variant_keys[1]})")
+    
+    print(f"🔍 Found {len(shift_mappings)} emoji shift mappings")
+    return shift_mappings
+
+
 def extract_action_mappings_from_keymap(data):
     """Extract actual key mappings from ZMK keymap data to generate proper actionMappings"""
     mappings = {}
@@ -1346,8 +1384,8 @@ def extract_action_mappings_from_keymap(data):
         'C_MEDIA_HOME': 'f3'
     }
 
-    # Add mappings for found consumer codes and their display symbols
-    for code in consumer_codes_found:
+    # Add mappings for found consumer codes and their display symbols (sorted for stable output)
+    for code in sorted(consumer_codes_found):
         if code in consumer_mappings:
             # Add the actual consumer code
             mappings[code] = consumer_mappings[code]
@@ -1404,6 +1442,10 @@ def main():
         # Generate action mappings from actual keymap data
         print("🔍 Scanning keymap for consumer codes...")
         action_mappings = extract_action_mappings_from_keymap(keymap)
+        
+        # Extract custom shift mappings from emoji.yaml
+        print("🔍 Scanning emoji.yaml for shift mappings...")
+        custom_shift_mappings = extract_custom_shift_mappings_from_emoji_yaml()
 
         # Find layer indices by name
         layer_indices = []
@@ -1524,8 +1566,12 @@ def main():
                 "leftPosition": 2,
                 "rightPosition": 2
             },
-            "actionMappings": action_mappings
+            "actionMappings": dict(sorted(action_mappings.items()))
         }
+        
+        # Add customShiftMappings if any were found
+        if custom_shift_mappings:
+            config["customShiftMappings"] = dict(sorted(custom_shift_mappings.items()))
 
         # Save to file with compact arrays
         with open("split_matrix_config.json", 'w', encoding='utf-8') as f:
@@ -1540,6 +1586,8 @@ def main():
         print("✅ Clean keypad notation: ⁷⁸⁹ → 789, ⊖⊕⊗ → -+*")
         print("✅ Dynamic action mappings: Extracted from actual ZMK consumer codes")
         print("✅ Layer toggles: Semantic actions for OverKeys integration")
+        if custom_shift_mappings:
+            print(f"✅ Custom shift mappings: {len(custom_shift_mappings)} emoji variants from emoji.yaml")
 
     except Exception as e:
         print(f"❌ Error: {e}")
