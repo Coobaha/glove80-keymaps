@@ -58,7 +58,7 @@
     windows: "'W'"
   }.each_with_index do |(os, char), index|
 %>
-<%= "//" if index > 0 %>#define OPERATING_SYSTEM <%= char %> // <%= os %>
+<%= index > 0 ? "//" : "  " %>#define OPERATING_SYSTEM <%= char %> // <%= os %>
 <%
   end
 %>
@@ -138,12 +138,13 @@
       params = key.dig("params", 0, "value")
 
       tap = 0 # &kp 0 is functionally equivalent to &none
+      lay = nil
       case behavior
       when "&kp"
         tap = resolve_nested_keystrokes(key)
 
       when "Custom"
-        case params
+        case params.lstrip.sub(/^&/, '').rstrip
         when /(?:Left|Right)\w+\s*\(\s*(\w+)/
           tap = $1
         when /engram_(\w+)/
@@ -152,6 +153,9 @@
           tap = "LPAR"
         when /parang_right/
           tap = "RPAR"
+        when /\s+(LAYER_\w+)\s*/
+          lay = $1
+          tap = $' unless $'.empty?
         when /([A-Z0-9_]+)(\s+0)*$/
           tap = $1
         end
@@ -159,8 +163,13 @@
 
       coords = KEY_BY_POS[index]
 %>
-#define KEY_<%= coords %> <%= tap %>
+  #define KEY_<%= coords %> <%= tap %>
 <%
+      if lay
+%>
+  #define LAY_<%= coords %> <%= lay %>
+<%
+      end
     end
 %>
 #endif
@@ -171,6 +180,7 @@
 combos {
   compatible = "zmk,combos";
   <%
+    alpha_layer_ids = (0...ALPHA_LAYERS_COUNT).to_a.join(" ")
     typing_layer_ids = (0..ALPHA_LAYERS_COUNT).to_a.join(" ")
 
     NORMAL_LAYERS_COUNT = keymap["layer_names"].find_index("Lower")
@@ -191,14 +201,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T3>;
     bindings = <&sk _GLOBE>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_sticky_globe_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T3>;
     bindings = <&sk _GLOBE>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T1+T2
@@ -207,14 +217,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T2>;
     bindings = <&sk RALT>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_sticky_ralt_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T2>;
     bindings = <&sk RALT>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T2+T5
@@ -224,7 +234,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T2 POS_LH_T5>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
   #endif
 
@@ -232,7 +242,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T2 POS_RH_T5>;
     bindings = <&kp LG(LA(LC(LSHFT)))>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T5+T6
@@ -242,7 +252,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T5 POS_LH_T6>;
     bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
   #endif
 
@@ -250,7 +260,7 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T5 POS_RH_T6>;
     bindings = <&kp LC(LSHFT)>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T3+T6
@@ -259,14 +269,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T3 POS_LH_T6>;
     bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_meh_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T3 POS_RH_T6>;
     bindings = <&kp LA(LC(LSHFT))>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T1+T4
@@ -291,14 +301,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T4 POS_LH_T5>;
     bindings = <&caps_word>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_word_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T4 POS_RH_T5>;
     bindings = <&caps_word>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // T1+T5
@@ -307,14 +317,14 @@ combos {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T1 POS_LH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   combo_caps_lock_right {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_RH_T1 POS_RH_T5>;
     bindings = <&kp CAPSLOCK>;
-    layers = <<%= typing_layer_ids %>>;
+    layers = <<%= alpha_layer_ids %>>;
   };
 
   // C1R5+C2R6
@@ -709,24 +719,28 @@ behaviors {
     FINGERS = %w[ pinky ringy middy index ]
     PAIRED_HANDS = HANDS.cycle.each_cons(2).take(2).to_h
   %>
-  #define LEFT_HAND_KEYS      \
-          0  1  2  3  4       \
-         10 11 12 13 14 15    \
-         22 23 24 25 26 27    \
-         34 35 36 37 38 39    \
-         46 47 48 49 50 51    \
-         64 65 66 67 68
-  #define RIGHT_HAND_KEYS     \
-                                           5  6  7  8  9 \
-                                       16 17 18 19 20 21 \
-                                       28 29 30 31 32 33 \
-                                       40 41 42 43 44 45 \
-                                       58 59 60 61 62 63 \
-                                          75 76 77 78 79
-  #define THUMB_KEYS          \
-                        69 52       57 74                \
-                         70 53     56 73                 \
-                          71 54   55 72
+  #define                                              \
+       LEFT_HAND_KEYS                                  \
+        0  1  2  3  4                                  \
+       10 11 12 13 14 15                               \
+       22 23 24 25 26 27                               \
+       34 35 36 37 38 39                               \
+       46 47 48 49 50 51                               \
+       64 65 66 67 68                                  \
+                      69 52                            \
+                       70 53                           \
+                        71 54
+  #define                                              \
+                                       RIGHT_HAND_KEYS \
+                                         5  6  7  8  9 \
+                                     16 17 18 19 20 21 \
+                                     28 29 30 31 32 33 \
+                                     40 41 42 43 44 45 \
+                                     58 59 60 61 62 63 \
+                                        75 76 77 78 79 \
+                                  57 74                \
+                                 56 73                 \
+                                55 72
 
   #define LEFT_PINKY_KEY  KEY_LH_C5R4
   #define LEFT_RINGY_KEY  KEY_LH_C4R4
@@ -809,7 +823,7 @@ behaviors {
   <%= target %><%= target_variant %>: homey_<%= target %><%= target_variant %> {
     compatible = "zmk,behavior-hold-tap";
     flavor = <%= source.upcase %>_HOLDING_TYPE;
-    hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <<%= PAIRED_HANDS[hand].upcase %>_HAND_KEYS>;
     hold-trigger-on-release; // wait for other home row mods
     tapping-term-ms = <<%= source.upcase %>_HOLDING_TIME>;
     quick-tap-ms = <<%= source.upcase %>_REPEAT_DECAY>;
@@ -835,10 +849,10 @@ behaviors {
       unless chord
     %>
     #ifdef SHIFT_FORGIVENESS
-    #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
+      #if <%= target.upcase %>_MOD == LSFT || <%= target.upcase %>_MOD == RSFT
+        hold-while-undecided; // requires 24.08-beta1 or newer firmware
+        retro-tap; // tap on standalone hold
+      #endif
     #endif
     <%
       end
@@ -894,9 +908,9 @@ behaviors {
   #define <%= target_CamelCase %>_unroll(layer_index) <%= target_CamelCase %>_concat(<%= target_CamelCase %>_layer, layer_index)
   #define <%= target_CamelCase %>_concat(prefix, layer_index) prefix ## layer_index
   #ifdef ENFORCE_BILATERAL
-  #define <%= target %>_layer0_variant <%= target %>_bilateral
+    #define <%= target %>_layer0_variant <%= target %>_bilateral
   #else
-  #define <%= target %>_layer0_variant <%= target %>
+    #define <%= target %>_layer0_variant <%= target %>
   #endif
   <%
         ALPHA_LAYERS.each_with_index do |(layer_name, _layer_keys), layer_index|
@@ -1271,7 +1285,7 @@ behaviors {
   // - https://zmk.dev/docs/behaviors/caps-word
   // - https://getreuer.info/posts/keyboards/caps-word/index.html
   //
-  behavior_caps_word {
+  caps_word {
     continue-list = <
       UNDERSCORE MINUS
       BACKSPACE DELETE
@@ -1794,15 +1808,15 @@ macros {
         if composition_for_os
   %>
       #ifdef WORLD_USE_COMPOSE
-      #define <%= has_compose %>
-      <%=
-        resolve_compose_keystrokes(composition_for_os, os).join(", ")
-      %>
+        #define <%= has_compose %>
+        <%=
+          resolve_compose_keystrokes(composition_for_os, os).join(", ")
+        %>
       #else
   <%
         end
   %>
-      <%= sequence.join(", ") %>
+      <%= "  " if composition_for_os %><%= sequence.join(", ") %>
   <%
         if composition_for_os
   %>
@@ -1819,9 +1833,9 @@ macros {
       mask = [
         "(~(", # the negation suppresses any unrelated mods
           "#ifdef #{has_compose}",
-            "COMPOSE_MORPH_MODS",
+            "  COMPOSE_MORPH_MODS",
           "#else",
-            "UNICODE_MORPH_MODS",
+            "  UNICODE_MORPH_MODS",
           "#endif",
         "))"
       ].join("\n")
