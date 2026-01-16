@@ -1,14 +1,15 @@
-// NOTE: Use the many #define settings below to customize this keymap!
-#define OPERATING_SYSTEM 'M' // choose 'L'inux, 'M'acOS, or 'W'indows
-#define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
-#define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
-//#define THUMB_HOLDING_TIME 170
+#define ENABLE_MOUSE_KEYS
+// #define SPACE_FORGIVENESS
+#define SPACE_HOLDING_TYPE "tap-preferred"
+#define RIGHT_INDEX_STREAK_DECAY 100 // faster cooldown for right HRM shift
+#define SHIFT_FIRING_DECAY 50
+#define DIFFICULTY_LEVEL  0
+#define ENFORCE_BILATERAL
+#define OPERATING_SYSTEM 'M'
 #define COMBO_FIRING_DECAY 65
 #define TAPPING_RESOLUTION 157
-//#define SPACE_FORGIVENESS  // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
-#define ENABLE_MOUSE_KEYS  // requires HID_POINTING override to "y"
 //#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 //#define WORLD_USE_COMPOSE  // use native Compose in place of Unicode
 //#define WORLD_HOST_AZERTY  // host computer is set to AZERTY locale
@@ -260,7 +261,7 @@ combos {
   combo_win_tab_switcher_left {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T3 POS_LH_T6>;
-    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
+    bindings = <&mod_tab_chord _G_TAB LAYER_Cursor>;
     layers = <<%= alpha_layer_ids %>>;
   };
   #endif
