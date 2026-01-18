@@ -1,0 +1,70 @@
+{
+  "_comment": "ZMK key code to display mapping. Used by keymap_to_split_matrix.py",
+  "letters": {
+    "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F", "G": "G",
+    "H": "H", "I": "I", "J": "J", "K": "K", "L": "L", "M": "M", "N": "N",
+    "O": "O", "P": "P", "Q": "Q", "R": "R", "S": "S", "T": "T", "U": "U",
+    "V": "V", "W": "W", "X": "X", "Y": "Y", "Z": "Z"
+  },
+  "numbers": {
+    "N1": "1", "N2": "2", "N3": "3", "N4": "4", "N5": "5",
+    "N6": "6", "N7": "7", "N8": "8", "N9": "9", "N0": "0"
+  },
+  "function_keys": {
+    "F1": "F1", "F2": "F2", "F3": "F3", "F4": "F4", "F5": "F5",
+    "F6": "F6", "F7": "F7", "F8": "F8", "F9": "F9", "F10": "F10",
+    "F11": "F11", "F12": "F12", "F13": "F13", "F14": "F14", "F15": "F15",
+    "F16": "F16", "F17": "F17", "F18": "F18", "F19": "F19", "F20": "F20"
+  },
+  "symbols": {
+    "MINUS": "-", "EQUAL": "=", "LBKT": "[", "RBKT": "]", "BSLH": "\\",
+    "SEMI": ";", "SQT": "'", "SINGLE_QUOTE": "'", "GRAVE": "`", "COMMA": ",", "DOT": ".",
+    "FSLH": "/", "EXCL": "!", "AT": "@", "HASH": "#", "DLLR": "$",
+    "PRCNT": "%", "CARET": "^", "AMPS": "&", "ASTRK": "*", "LPAR": "(",
+    "RPAR": ")", "UNDER": "_", "PLUS": "+", "LBRC": "{", "RBRC": "}",
+    "PIPE": "|", "COLON": ":", "DQT": "\"", "TILDE": "~", "LT": "<",
+    "GT": ">", "QMARK": "?",
+    "NON_US_BSLH": "\\", "NON_US_HASH": "#", "NUHS": "#", "NUBS": "\\"
+  },
+  "special": {
+    "SPACE": "\u23b5", "TAB": "\u21e5", "RET": "\u21b5", "ESC": "\u238b",
+    "BSPC": "\u232b", "DEL": "\u2326", "INS": "Insert",
+    "BACKSPACE": "\u232b", "ENTER": "\u21b5", "INSERT": "Insert"
+  },
+  "navigation": {
+    "LEFT": "\u2190", "RIGHT": "\u2192", "UP": "\u2191", "DOWN": "\u2193",
+    "HOME": "Home", "END": "End", "PG_UP": "PgUp", "PG_DN": "PgDn",
+    "PAGE_UP": "PgUp", "PAGE_DOWN": "PgDn"
+  },
+  "modifiers": {
+    "LSHIFT": "⇧", "RSHIFT": "⇧", "LSHFT": "⇧", "RSHFT": "⇧",
+    "LCTRL": "⌃", "RCTRL": "⌃",
+    "LALT": "⌥", "RALT": "⌥", "LGUI": "\u2318", "RGUI": "\u2318",
+    "LCMD": "CMD", "RCMD": "CMD", "LWIN": "WIN", "RWIN": "WIN",
+    "CTRL": "⌃", "ALT": "⌥", "SHIFT": "⇧", "CMD": "CMD", "WIN": "WIN"
+  },
+  "consumer": {
+    "C_PLAY": "\u25b6", "C_PAUSE": "\u23f8", "C_PLAY_PAUSE": "\u23ef", "C_PP": "\u23ef",
+    "C_STOP": "\u23f9", "C_NEXT": "\u23ed", "C_PREV": "\u23ee", "C_REWIND": "\u23ea",
+    "C_FAST_FORWARD": "\u23e9", "C_EJECT": "\u23cf", "C_MUTE": "\ud83d\udd07",
+    "C_VOL_UP": "\ud83d\udd0a", "C_VOL_DN": "\ud83d\udd09", "C_BRI_UP": "\u2600+", "C_BRI_DN": "\u2600-",
+    "C_BRI_MIN": "\u26000", "C_BRI_MAX": "\u2600\u26a1", "C_BRI_AUTO": "\u2600\ud83e\udd16",
+    "C_MEDIA_HOME": "\ud83c\udfe0"
+  },
+  "keypad": {
+    "KP_NUM": "NumLock", "KP_SLASH": "/", "KP_MULTIPLY": "*", "KP_MINUS": "-",
+    "KP_PLUS": "+", "KP_ENTER": "\u23ce", "KP_DOT": ".", "KP_COMMA": ",",
+    "KP_EQUAL": "=", "KP_N0": "0", "KP_N1": "1", "KP_N2": "2", "KP_N3": "3",
+    "KP_N4": "4", "KP_N5": "5", "KP_N6": "6", "KP_N7": "7", "KP_N8": "8", "KP_N9": "9",
+    "KP_CLEAR": "Clear", "KP_LPAR": "(", "KP_RPAR": ")"
+  },
+  "system": {
+    "CAPS": "\u21ea", "SLCK": "\u21f3", "PAUSE_BREAK": "\u23f8",
+    "PSCRN": "\ud83d\udcf7", "K_APP": "\u2630", "POWER": "\u23fb", "SLEEP": "\ud83d\ude34",
+    "LOCK": "\ud83d\udd12", "CLEAR": "\ud83d\uddd1"
+  },
+  "custom": {
+    "DOTDOT": "..", "STAR": "*",
+    "_HOME": "HOME", "_END": "END"
+  }
+}

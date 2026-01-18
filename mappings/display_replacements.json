@@ -1,0 +1,55 @@
+{
+  "_comment": "Long word to compact display mapping. Used by add_spaces_to_long_words()",
+  "selection": {
+    "SelectAll": "Sel All",
+    "SelectLine": "Sel Line",
+    "SelectWord": "Sel Word",
+    "ExtendWord": "Ext Word",
+    "ExtendLine": "Ext Line",
+    "ClearSelect": "Clear"
+  },
+  "media": {
+    "MediaHome": "\ud83c\udfe0",
+    "PlayPause": "\u23ef",
+    "BrightMax": "\u2600\u26a1",
+    "BrightMin": "\u26000",
+    "AutoBright": "\u2600\ud83e\udd16"
+  },
+  "mouse": {
+    "FastMouse": "Fast",
+    "SlowMouse": "Slow",
+    "WarpMouse": "Warp",
+    "LeftClick": "L Click",
+    "RightClick": "R Click",
+    "MiddleClick": "M Click"
+  },
+  "system": {
+    "RGBToggle": "\ud83c\udf08",
+    "ScrollLock": "\u21f3",
+    "CapsLock": "\u21ea",
+    "PrintScreen": "\ud83d\udcf7"
+  },
+  "rgb": {
+    "Hue+": "H+", "Hue-": "H-",
+    "Sat+": "S+", "Sat-": "S-",
+    "Bright+": "L+", "Bright-": "L-",
+    "Speed+": "Sp+", "Speed-": "Sp-",
+    "Effect+": "E+", "Effect-": "E-"
+  },
+  "find": {
+    "FINDPREV": "\ud83d\udd0d\u2190",
+    "FINDNEXT": "\ud83d\udd0d\u2192",
+    "FIND": "\ud83d\udd0d"
+  },
+  "editing": {
+    "UNDO": "Undo",
+    "REDO": "Redo",
+    "CUT": "Cut",
+    "COPY": "Copy",
+    "PASTE": "Paste",
+    "TOGGLE": "\ud83d\udd04",
+    "DELETE": "Delete",
+    "BACKSPACE": "Bksp",
+    "INSERT": "Insert"
+  }
+}

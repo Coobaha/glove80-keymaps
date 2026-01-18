@@ -1,0 +1,185 @@
+{
+  "_comment": "ZMK behavior patterns -> display mappings. Pattern types: exact, prefix, contains, regex",
+
+  "shifted_numbers": {
+    "_comment": "LS(N1) -> ! etc",
+    "N1": "!", "N2": "@", "N3": "#", "N4": "$", "N5": "%",
+    "N6": "^", "N7": "&", "N8": "*", "N9": "(", "N0": ")"
+  },
+
+  "shifted_symbols": {
+    "_comment": "LS(MINUS) -> _ etc",
+    "MINUS": "_", "EQUAL": "+", "LBKT": "{", "RBKT": "}",
+    "BSLH": "|", "SEMI": ":", "SQT": "\"", "SINGLE_QUOTE": "\"", "GRAVE": "~",
+    "COMMA": "<", "DOT": ">", "FSLH": "?",
+    "NON_US_BSLH": "|", "NON_US_HASH": "~", "NUBS": "|", "NUHS": "~"
+  },
+
+  "modifier_symbols": {
+    "_comment": "Modifier key codes to display symbols (macOS style)",
+    "LG": "\u2318", "RG": "\u2318",
+    "LA": "\u2325", "RA": "\u2325",
+    "LC": "\u2303", "RC": "\u2303",
+    "LS": "\u21e7", "RS": "\u21e7",
+    "LGUI": "\u2318", "RGUI": "\u2318",
+    "LALT": "\u2325", "RALT": "\u2325",
+    "LCTRL": "\u2303", "RCTRL": "\u2303",
+    "LSHIFT": "\u21e7", "RSHIFT": "\u21e7"
+  },
+
+  "mouse_scroll": {
+    "_comment": "&msc behaviors",
+    "SCRL_UP": "Scroll\u2191",
+    "SCRL_DOWN": "Scroll\u2193",
+    "SCRL_LEFT": "Scroll\u2190",
+    "SCRL_RIGHT": "Scroll\u2192"
+  },
+
+  "mouse_move": {
+    "_comment": "&mmv behaviors - arrows only",
+    "MOVE_UP": "\u2191",
+    "MOVE_DOWN": "\u2193",
+    "MOVE_LEFT": "\u2190",
+    "MOVE_RIGHT": "\u2192"
+  },
+
+  "mouse_click": {
+    "_comment": "&mkp behaviors",
+    "LCLK": "L Click",
+    "RCLK": "R Click",
+    "MCLK": "M Click",
+    "MB4": "Btn4",
+    "MB5": "Btn5"
+  },
+
+  "rgb_commands": {
+    "_comment": "&rgb_ug behaviors",
+    "RGB_TOG": "RGBToggle",
+    "RGB_HUI": "Hue+",
+    "RGB_HUD": "Hue-",
+    "RGB_SAI": "Sat+",
+    "RGB_SAD": "Sat-",
+    "RGB_BRI": "Bright+",
+    "RGB_BRD": "Bright-",
+    "RGB_SPI": "Speed+",
+    "RGB_SPD": "Speed-",
+    "RGB_EFF": "Effect+",
+    "RGB_EFR": "Effect-"
+  },
+
+  "bluetooth": {
+    "_comment": "&bt behaviors",
+    "BT_CLR": "BT Clear",
+    "BT_SEL 0": "BT 0",
+    "BT_SEL 1": "BT 1",
+    "BT_SEL 2": "BT 2",
+    "BT_SEL 3": "BT 3",
+    "BT_SEL 4": "BT 4",
+    "BT_NXT": "BT Next",
+    "BT_PRV": "BT Prev"
+  },
+
+  "output": {
+    "_comment": "&out behaviors",
+    "OUT_USB": "USB Out",
+    "OUT_BLE": "BT Out",
+    "OUT_TOG": "Out Toggle"
+  },
+
+  "layer_momentary": {
+    "_comment": "&mo and &layer layer indices",
+    "13": "Kpd",
+    "17": "Slow",
+    "18": "Fast",
+    "19": "Warp"
+  },
+
+  "layer_abbreviations": {
+    "_comment": "Layer name -> short form",
+    "Function": "Fn",
+    "Cursor": "Cur",
+    "Number": "Num",
+    "Symbol": "Sym",
+    "Mouse": "Mouse",
+    "System": "Sys",
+    "Emoji": "Emoji",
+    "World": "World",
+    "MouseSlow": "Slow",
+    "MouseFast": "Fast",
+    "MouseWarp": "Warp",
+    "MouseFine": "Fine"
+  },
+
+  "sticky_modifiers": {
+    "_comment": "&sk sticky key modifiers",
+    "INDEX_MOD": "\u26a1\u21e7",
+    "MIDDY_MOD": "\u26a1\u2318",
+    "RINGY_MOD": "\u26a1\u2325",
+    "PINKY_MOD": "\u26a1\u2303",
+    "LSHIFT": "\u26a1\u21e7",
+    "RSHIFT": "\u26a1\u21e7",
+    "SHIFT": "\u26a1\u21e7",
+    "LGUI": "\u26a1\u2318",
+    "RGUI": "\u26a1\u2318",
+    "LCMD": "\u26a1\u2318",
+    "RCMD": "\u26a1\u2318",
+    "CMD": "\u26a1\u2318",
+    "LALT": "\u26a1\u2325",
+    "RALT": "\u26a1\u2325",
+    "ALT": "\u26a1\u2325",
+    "LCTRL": "\u26a1\u2303",
+    "RCTRL": "\u26a1\u2303",
+    "CTRL": "\u26a1\u2303"
+  },
+
+  "home_row_mods": {
+    "_comment": "Home row mod finger -> modifier symbol (overlay layer)",
+    "pinky": "\u2303",
+    "ring": "\u2325",
+    "middy": "\u2318",
+    "middle": "\u2318",
+    "index": "\u21e7"
+  },
+
+  "graphite_morphs": {
+    "_comment": "Graphite layout mod-morph behaviors",
+    "&gr_au": "'",
+    "&gr_cm": ",",
+    "&gr_pd": ".",
+    "&gr_fs": "/",
+    "&gr_mi": "-"
+  },
+
+  "special_behaviors": {
+    "_comment": "Direct behavior -> display mappings",
+    "&magic": "Magic",
+    "&lower": "LOWER",
+    "&bootloader": "Bootldr",
+    "&reset": "Reset",
+    "&abc": "ABC",
+    "&cyrilic": "\u0410\u0411\u0412",
+    "&linux_magic_sysrq": "SysRq",
+    "&space": "\u23b5",
+    "&layer": "Layer"
+  },
+
+  "selection_behaviors": {
+    "_comment": "TailorKey selection behaviors",
+    "EXTEND_LINE": "Ext Line",
+    "EXTEND_WORD": "Ext Word",
+    "SELECT_LINE": "Sel Line",
+    "SELECT_WORD": "Sel Word",
+    "SELECT_NONE": "Clear",
+    "&extend_word": "Ext Word",
+    "&extend_line": "Ext Line",
+    "&extend_all": "Ext All",
+    "&select_word": "Sel Word",
+    "&select_line": "Sel Line",
+    "&select_all": "Sel All",
+    "&select_none": "Clear"
+  },
+
+  "letters": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+
+  "base_layer_names": ["", "GRAPHITE", "HRM_macOS", "HRM_WinLinx", "Typing"]
+}
