@@ -5,14 +5,13 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["F12", "1", "2", "3", "4", "5"],
+          ["`", "1", "2", "3", "4", "5"],
           ["⇥", "B", "L", "D", "W", "Z"],
           ["⎋", "N", "R", "T", "S", "G"],
-          ["Magic", "Q", "X", "M", "C", "V"],
-          [null, null, "Home", "End", "`", null]
+          ["MAGIC", "Q", "X", "M", "C", "V"]
         ],
         "thumbRows": [
-          ["⌫", "⌦", "⌥"]
+          ["Home", "←", "→", "⌫", "⌦", "CTRL"]
         ]
       },
       "rightHand": {
@@ -20,11 +19,10 @@
           ["6", "7", "8", "9", "0", "="],
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
-          ["K", "P", ".", "-", "/", "Kpd"],
-          [null, "\\", "[", "]", null, null]
+          ["K", "P", ".", "-", "/", "Layer"]
         ],
         "thumbRows": [
-          ["⌥", "↵", "⎵"]
+          ["ALT", "↵", "⎵", "↑", "↓", "End"]
         ]
       }
     },
@@ -35,27 +33,24 @@
         "mainRows": [
           [null, "⎋", "Insert", "⇧⇥", "⌦", null],
           ["⇪", "↵", "⇧⌘Z", "⌘Z", "⌫", "⌘X"],
-          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "⌘C"],
-          ["⌘L", "⌘A", "Sel Line", "Sel Word", "⌘F", "⌘V"],
-          [null, null, null, "⇧⌘G", "⌘G", null]
+          ["⚡⇧", "CTRL", "ALT", "⌘", "LSHFT", "⌘C"],
+          ["⌘L", "⌘A", "Sel Line", "Sel Word", "⌘F", "⌘V"]
         ],
         "thumbRows": [
-          []
+          [null, "⇧⌘G", "⌘G", null, null, null]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["HypF16", null, "☰", "⏸", "⇳", null],
+          ["⌃⌥⇧⌘F16", null, "☰", "⏸", "⇳", null],
           ["⌘X", "⇧⇥", "⌘Z", "⇧⌘Z", "⇥", "📷"],
           ["⌘C", "←", "↑", "↓", "→", "⚡⇧"],
-          ["⌘V", "Home", "PgUp", "PgDn", "End", "⌘L"],
-          [null, "⌘F", "⇧⌘G", "⌘G", null, null]
+          ["⌘V", "Home", "PgUp", "PgDn", "End", "⌘L"]
         ],
         "thumbRows": [
-          ["Clear", "Ext Line", "Ext Word"]
+          ["Clear", "Ext Line", "Ext Word", "⌘F", "⇧⌘G", "⌘G"]
         ]
-      },
-      "activeKey": "L_T1"
+      }
     },
     {
       "name": "Symbol",
@@ -65,37 +60,33 @@
           ["`", ",", "(", ")", ";", "."],
           ["!", "[", "{", "}", "]", "?"],
           ["#", "^", "=", "_", "$", "*"],
-          ["~", "<", "|", "-", ">", "/"],
-          [null, null, "'", "\"", "+", null]
+          ["~", "<", "|", "-", ">", "/"]
         ],
         "thumbRows": [
-          ["%", ":", "@"]
+          ["'", "⇧SINGLE_QUOTE", "+", "%", ":", "@"]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["HypF17", null, null, null, null, null],
+          ["⌘⇧⌥⌃F17", null, null, null, null, null],
           ["`", "⌦", "⇧⇥", "Insert", "⎋", null],
-          ["\"", "⌫", "⇥", "⎵", "↵", null],
-          ["'", "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          [null, "\\", "&", "..", null, null]
+          ["⇧SINGLE_QUOTE", "⌫", "⇥", "⎵", "↵", null],
+          ["'", "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null]
         ],
         "thumbRows": [
-          []
+          [null, null, null, "\\", "&", ".."]
         ]
-      },
-      "activeKey": "R_T1"
+      }
     },
     {
       "name": "Keypad",
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["HypF18", "F1", "F2", "F3", "F4", "F5"],
+          ["⌘⇧⌥⌃F18", "F1", "F2", "F3", "F4", "F5"],
           ["⇥", null, "Home", "↑", "End", "PgUp"],
           ["⎋", "⌃Y", "←", "↓", "→", "PgDn"],
-          ["Magic", "⌃Z", "⌃X", "⌃C", "⌃V", "⇧⌃V"],
-          []
+          ["MAGIC", "⌃Z", "⌃X", "⌃C", "⌃V", "⇧⌃V"]
         ],
         "thumbRows": [
           []
@@ -106,14 +97,12 @@
           ["F6", "F7", "F8", "F9", "F10", "F11"],
           ["7", "8", "9", "-", "/", "F12"],
           ["4", "5", "6", "+", "*", "NumLock"],
-          ["1", "2", "3", "⏎", "=", "Layer 0"],
-          [null, "0", ".", "⏎", null, null]
+          ["1", "2", "3", "⏎", "=", "Layer 0"]
         ],
         "thumbRows": [
-          [null, null, "0"]
+          [null, null, "0", "0", ".", "⏎"]
         ]
-      },
-      "activeKey": "L_T2"
+      }
     },
     {
       "name": "Mouse",
@@ -123,26 +112,23 @@
           [],
           [null, null, "Scroll←", "↑", "Scroll→", null],
           [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
-          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
-          [null, null, "⌘X", "⌘C", "⌘V", null]
+          [null, "Scroll↓", "mo16", "Fast", "Slow", "Scroll↓"]
         ],
         "thumbRows": [
-          ["L Click", "R Click", "Btn4"]
+          ["⌘X", "⌘C", "⌘V", "L Click", "R Click", "Btn4"]
         ]
       },
       "rightHand": {
         "mainRows": [
           ["F19", null, null, null, null, null],
           [null, "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
-          ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
-          [null, "←", "↓", "→", null, null]
+          ["Scroll↑", "Slow", "Fast", "mo16", "L Click", "Btn4"],
+          ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"]
         ],
         "thumbRows": [
-          ["L Click", null, "R Click"]
+          ["L Click", null, "R Click", "←", "↓", "→"]
         ]
-      },
-      "activeKey": "R_T2"
+      }
     },
     {
       "name": "Magic",
@@ -150,28 +136,25 @@
       "leftHand": {
         "mainRows": [
           [null, "☀-", "☀+", "⏮", "⏭", "⏯"],
-          ["Bootldr", "Sp+", "HypF20", "H+", "L+", "🌈"],
+          ["Bootldr", "Sp+", "⌃⌥⇧⌘F20", "H+", "L+", "🌈"],
           ["Reset", "Sp-", "S-", "H-", "L-", "E+"],
-          [null, null, "BT", "BT", "BT", "BT"],
-          [null, null, "Output", null, "Layer 2", null]
+          [null, null, "BT", "BT", "BT", "BT"]
         ],
         "thumbRows": [
-          ["Layer 0", null, "Layer 3"]
+          ["Output", null, "Layer 2", "Layer 0", null, "Layer 3"]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["🔇", "🔉", "🔊", "HypF21", "BT", "BT"],
-          ["HypF21", null, null, null, null, "Bootldr"],
+          ["🔇", "🔉", "🔊", "⌥⌃⇧⌘F21", "BT", "BT"],
+          ["⌃⌥⇧⌘F21", null, null, null, null, "Bootldr"],
           [null, "ABC", null, "АБВ", null, "Reset"],
-          [],
           []
         ],
         "thumbRows": [
           []
         ]
-      },
-      "activeKey": "L_C6R4"
+      }
     },
     {
       "name": "Gaming",
@@ -180,12 +163,11 @@
         "mainRows": [
           ["⎋", "1", "2", "3", "4", "5"],
           ["↵", "⇥", "Q", "W", "E", "R"],
-          ["`", "⇧", "A", "S", "D", "F"],
-          ["B", "⌃", "Z", "X", "C", "V"],
-          [null, null, "⌥", "T", "G", null]
+          ["`", "LSHFT", "A", "S", "D", "F"],
+          ["B", "CTRL", "Z", "X", "C", "V"]
         ],
         "thumbRows": [
-          ["⎵", "⇧", "⌃"]
+          ["ALT", "T", "G", "⎵", "LSHFT", "CTRL"]
         ]
       },
       "rightHand": {
@@ -193,11 +175,10 @@
           ["6", "7", "8", "9", "0", "-"],
           ["Y", "U", "I", "O", "P", "+"],
           ["H", "J", "K", "L", ";", "\""],
-          ["N", "M", "↑", "<", ">", "⌘"],
-          [null, "←", "↓", "→", null, null]
+          ["N", "M", "↑", "<", ">", "⌘"]
         ],
         "thumbRows": [
-          ["⌫", "⌥", "↵"]
+          ["⌫", "ALT", "↵", "←", "↓", "→"]
         ]
       }
     }
@@ -334,6 +315,15 @@
     "🧗": "🤹",
     "🪄": "🧙",
     "🫰": "👋"
+  },
+  "cycleGroup": {
+    "trigger": "ctrl+alt+shift+cmd+3",
+    "layers": [
+      "Cursor",
+      "Symbol",
+      "Keypad",
+      "Mouse"
+    ]
   },
   "physicalLayout": {
     "layouts": {
