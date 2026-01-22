@@ -2,10 +2,10 @@
   "keyboard": "go60",
   "firmware_api_version": "1",
   "locale": "en-US",
-  "uuid": "",
-  "parent_uuid": "820da971-3c3a-49a8-9973-b2a6e2a2c6ae",
+  "uuid": "7836c82e-6f4a-4dd6-aa28-1075fdc81567",
+  "parent_uuid": "1ffecdc0-c17c-4816-92f4-7a615a96919c",
   "unlisted": false,
-  "date": 1768644769,
+  "date": 1769023986,
   "creator": "cbhz",
   "title": "TailorKey v4.2l macOS Bilateral",
   "notes": "🧿TK42lBIL: https://sites.google.com/view/tailorkey\nTailorKey is a zero-code, Glorious Engrammer–inspired layout that’s beginner-friendly yet fully pro-ready. \nIt delivers a full set of advanced features, including:\n• Advanced Home Row Mods with Bilateral Combinations Enforcement (Sunaku)\n• Autoshift\n• Symbol, Cursor, and Gaming Layers\n• RGB Lighting (optional)\n• Advanced Mouse Emulation\n• Combo Keys\n\nTailorKey leverages the Layout Editor’s powerful built-in (native) functions, enabling easy customization, or allows you to simply copy its capabilities to craft your own unique layout—all without relying on Custom-Defined Behaviors.\n\n🖱️Mouse Emulation\nEnable mouse emulation by turning on the HID_POINTING option under Advanced Configuration.\nIf you’re using mouse emulation for the first time, unpair the keyboard from all host computers and then re-pair it.\n\nThis zero-code layout is developed by @moosy. More information is available on https://sites.google.com/view/tailorkey\nTailorKey is inspired by the fully featured Glorious Engrammer, developed by @sunaku. Please see https://github.com/sunaku/glove80-keymaps/releases for the Glorious Engrammer layout.\n\n💡 Tip: Want to use only part of this layout (like Home-Row Mods or AutoShift)? Just copy the relevant layer—its associated macros and hold-tap actions will be included automatically.\n📺 See how it's done here:  https://www.youtube.com/watch?v=m72eTAEUWho",
@@ -19,7 +19,7 @@
   "custom_devicetree": "",
   "config_parameters": [],
   "layout_parameters": {
-    "cirque_touch_sensitivity": "cirque-lh:low,cirque-rh:low"
+    "cirque_touch_sensitivity": "cirque-lh:high,cirque-rh:high"
   },
   "layer_names": [
     "GRAPHITE",
@@ -136,12 +136,7 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "EQUAL"
-          }
-        ]
+        "value": "&key_repeat"
       },
       {
         "value": "&kp",
@@ -197,7 +192,11 @@
           {
             "value": "&gr_au"
           }
-        ]
+        ],
+        "decoration": {
+          "label": "'_",
+          "background": "#ffffffff"
+        }
       },
       {
         "value": "&kp",
@@ -357,7 +356,11 @@
           {
             "value": "&gr_cm"
           }
-        ]
+        ],
+        "decoration": {
+          "label": ",?",
+          "background": "#ffffffff"
+        }
       },
       {
         "value": "&magic"
@@ -424,7 +427,11 @@
           {
             "value": "&gr_pd"
           }
-        ]
+        ],
+        "decoration": {
+          "label": ".>",
+          "background": "#ffffffff"
+        }
       },
       {
         "value": "Custom",
@@ -432,7 +439,11 @@
           {
             "value": "&gr_mi"
           }
-        ]
+        ],
+        "decoration": {
+          "label": "-\"",
+          "background": "#ffffffff"
+        }
       },
       {
         "value": "Custom",
@@ -440,13 +451,20 @@
           {
             "value": "&gr_fs"
           }
-        ]
+        ],
+        "decoration": {
+          "label": "/<",
+          "background": "#ffffffff"
+        }
       },
       {
-        "value": "&layer",
+        "value": "&lt",
         "params": [
           {
             "value": 13
+          },
+          {
+            "value": "EQUAL"
           }
         ]
       },
@@ -467,26 +485,8 @@
         ]
       },
       {
-        "value": "&mt",
+        "value": "&kp",
         "params": [
-          {
-            "value": "LA",
-            "params": [
-              {
-                "value": "LS",
-                "params": [
-                  {
-                    "value": "LG",
-                    "params": [
-                      {
-                        "value": "LCTRL"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           {
             "value": "GRAVE"
           }
@@ -496,7 +496,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "NON_US_BSLH"
+            "value": "FSLH"
           }
         ]
       },
@@ -612,7 +612,12 @@
         "value": "&trans"
       },
       {
-        "value": "&trans"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
+          }
+        ]
       },
       {
         "value": "&trans"
@@ -698,7 +703,12 @@
         ]
       },
       {
-        "value": "&trans"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LBKT"
+          }
+        ]
       },
       {
         "value": "&trans"
@@ -759,7 +769,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "G"
+            "value": "H"
           }
         ]
       },
@@ -808,7 +818,12 @@
         ]
       },
       {
-        "value": "&trans"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SQT"
+          }
+        ]
       },
       {
         "value": "&trans"
@@ -897,22 +912,22 @@
         "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
-        "value": "&none"
+        "value": "&trans"
       },
       {
         "value": "&trans"
@@ -4067,7 +4082,12 @@
     ],
     [
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "INS"
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -4081,7 +4101,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "INS"
+            "value": "TAB"
           }
         ]
       },
@@ -4110,32 +4130,7 @@
         "value": "&none"
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LC",
-            "params": [
-              {
-                "value": "LA",
-                "params": [
-                  {
-                    "value": "LS",
-                    "params": [
-                      {
-                        "value": "LG",
-                        "params": [
-                          {
-                            "value": "F16"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&none"
@@ -4171,7 +4166,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "CAPS"
+            "value": "SPACE"
           }
         ]
       },
@@ -4629,32 +4624,7 @@
     ],
     [
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LG",
-            "params": [
-              {
-                "value": "LS",
-                "params": [
-                  {
-                    "value": "LA",
-                    "params": [
-                      {
-                        "value": "LC",
-                        "params": [
-                          {
-                            "value": "F18"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -4753,7 +4723,12 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SPACE"
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -4775,7 +4750,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "END"
+            "value": "BSPC"
           }
         ]
       },
@@ -5070,7 +5045,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "KP_N0"
+            "value": "SPACE"
           }
         ]
       },
@@ -5174,32 +5149,7 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LG",
-            "params": [
-              {
-                "value": "LS",
-                "params": [
-                  {
-                    "value": "LA",
-                    "params": [
-                      {
-                        "value": "LC",
-                        "params": [
-                          {
-                            "value": "F17"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&none"
@@ -5454,17 +5404,7 @@
         "value": "&none"
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LS",
-            "params": [
-              {
-                "value": "GRAVE"
-              }
-            ]
-          }
-        ]
+        "value": "&symb_dotdot_v1_TKZ"
       },
       {
         "value": "&kp",
@@ -5473,7 +5413,7 @@
             "value": "LS",
             "params": [
               {
-                "value": "COMMA"
+                "value": "N7"
               }
             ]
           }
@@ -5988,12 +5928,7 @@
         "value": "&none"
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F19"
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&none"
@@ -7542,32 +7477,7 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LC",
-            "params": [
-              {
-                "value": "LA",
-                "params": [
-                  {
-                    "value": "LS",
-                    "params": [
-                      {
-                        "value": "LG",
-                        "params": [
-                          {
-                            "value": "F20"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&rgb_ug",
@@ -8112,7 +8022,12 @@
           "value": "&kp",
           "params": [
             {
-              "value": "F18"
+              "value": "LC",
+              "params": [
+                {
+                  "value": "F18"
+                }
+              ]
             }
           ]
         }
@@ -8901,7 +8816,7 @@
           "value": "&kp",
           "params": [
             {
-              "value": "A"
+              "value": "H"
             }
           ]
         },
@@ -8915,7 +8830,7 @@
           "value": "&kp",
           "params": [
             {
-              "value": "N"
+              "value": "MACRO_PLACEHOLDER"
             }
           ]
         }
@@ -9062,7 +8977,7 @@
           "value": "&kp",
           "params": [
             {
-              "value": "E"
+              "value": "A"
             }
           ]
         },
@@ -9076,7 +8991,7 @@
           "value": "&kp",
           "params": [
             {
-              "value": "N"
+              "value": "MACRO_PLACEHOLDER"
             }
           ]
         }
@@ -9711,6 +9626,29 @@
         }
       ],
       "params": []
+    },
+    {
+      "name": "&dblclick",
+      "description": "",
+      "bindings": [
+        {
+          "value": "&mkp",
+          "params": [
+            {
+              "value": "LCLK"
+            }
+          ]
+        },
+        {
+          "value": "&mkp",
+          "params": [
+            {
+              "value": "LCLK"
+            }
+          ]
+        }
+      ],
+      "params": []
     }
   ],
   "inputListeners": [
@@ -9828,8 +9766,8 @@
         {
           "code": "&zip_xy_scaler",
           "params": [
-            5,
-            11
+            1,
+            2
           ]
         },
         {
@@ -9973,39 +9911,8 @@
             {
               "code": "&zip_xy_scaler",
               "params": [
-                2,
-                5
-              ]
-            },
-            {
-              "code": "&zip_xy_transform",
-              "params": [
-                [
-                  "INPUT_TRANSFORM_Y_INVERT"
-                ]
-              ]
-            },
-            {
-              "code": "&zip_xy_to_scroll_mapper",
-              "params": []
-            },
-            {
-              "code": "&zip_click_to_right_click_mapper",
-              "params": []
-            }
-          ]
-        },
-        {
-          "code": "layer_13",
-          "layers": [
-            13
-          ],
-          "inputProcessors": [
-            {
-              "code": "&zip_xy_scaler",
-              "params": [
-                9,
-                13
+                3,
+                10
               ]
             },
             {
@@ -10035,8 +9942,8 @@
             {
               "code": "&zip_xy_scaler",
               "params": [
-                9,
-                13
+                3,
+                4
               ]
             },
             {
@@ -10049,37 +9956,6 @@
             },
             {
               "code": "&zip_xy_to_scroll_mapper",
-              "params": []
-            }
-          ]
-        },
-        {
-          "code": "layer_12",
-          "layers": [
-            12
-          ],
-          "inputProcessors": [
-            {
-              "code": "&zip_xy_scaler",
-              "params": [
-                8,
-                15
-              ]
-            },
-            {
-              "code": "&zip_xy_transform",
-              "params": [
-                [
-                  "INPUT_TRANSFORM_Y_INVERT"
-                ]
-              ]
-            },
-            {
-              "code": "&zip_xy_to_scroll_mapper",
-              "params": []
-            },
-            {
-              "code": "&zip_click_to_right_click_mapper",
               "params": []
             }
           ]
@@ -10092,8 +9968,8 @@
         {
           "code": "&zip_xy_scaler",
           "params": [
-            2,
-            1
+            8,
+            3
           ]
         }
       ],
@@ -10165,9 +10041,23 @@
           ]
         },
         {
-          "code": "layers_12_16",
+          "code": "layer_12",
           "layers": [
-            12,
+            12
+          ],
+          "inputProcessors": [
+            {
+              "code": "&zip_xy_scaler",
+              "params": [
+                9,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "code": "layer_16",
+          "layers": [
             16
           ],
           "inputProcessors": [
@@ -10189,7 +10079,7 @@
             {
               "code": "&zip_xy_scaler",
               "params": [
-                4,
+                6,
                 1
               ]
             }
@@ -12081,45 +11971,6 @@
       ]
     },
     {
-      "name": "sticky_hyp_rght_v1_TKZ",
-      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LG",
-            "params": [
-              {
-                "value": "LA",
-                "params": [
-                  {
-                    "value": "LC",
-                    "params": [
-                      {
-                        "value": "LSHFT"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "keyPositions": [
-        43,
-        51
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
       "name": "tabswitch_gui_v1_TKZ",
       "description": "Alt Tab Switcher (Cursor Layer) - TailorKey",
       "binding": {
@@ -12145,39 +11996,6 @@
       ]
     },
     {
-      "name": "sticky_meh_rght_v1_TKZ",
-      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LA",
-            "params": [
-              {
-                "value": "LC",
-                "params": [
-                  {
-                    "value": "LSHFT"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "keyPositions": [
-        52,
-        44
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        2,
-        3,
-        1
-      ]
-    },
-    {
       "name": "capslock_v1_TKZ",
       "description": "capslock when pressing both T1's - TailorKey",
       "binding": {
@@ -12191,23 +12009,6 @@
       "keyPositions": [
         54,
         59
-      ],
-      "layers": [
-        0,
-        2,
-        3,
-        1
-      ]
-    },
-    {
-      "name": "capsword",
-      "description": "",
-      "binding": {
-        "value": "&caps_word"
-      },
-      "keyPositions": [
-        50,
-        51
       ],
       "layers": [
         0,
@@ -12243,6 +12044,117 @@
       ]
     },
     {
+      "name": "sticky_hyp_left_v1_TKZ",
+      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LG",
+            "params": [
+              {
+                "value": "LA",
+                "params": [
+                  {
+                    "value": "LC",
+                    "params": [
+                      {
+                        "value": "LSHFT"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keyPositions": [
+        50,
+        54
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "sticky_hyp_rght_v1_TKZ",
+      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LG",
+            "params": [
+              {
+                "value": "LA",
+                "params": [
+                  {
+                    "value": "LC",
+                    "params": [
+                      {
+                        "value": "LSHFT"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keyPositions": [
+        51,
+        59
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "sticky_meh_rght_v1_TKZ",
+      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LA",
+            "params": [
+              {
+                "value": "LC",
+                "params": [
+                  {
+                    "value": "LSHFT"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keyPositions": [
+        43,
+        51
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
       "name": "tabswitch_ctrl_v1_TKZ",
       "description": "Ctrl Tab Switcher (Cursor Layer) - TailorKey",
       "binding": {
@@ -12256,9 +12168,56 @@
           }
         ]
       },
+      "keyPositions": [],
+      "layers": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "name": "sticky_meh_left_v1_TKZ",
+      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LA",
+            "params": [
+              {
+                "value": "LC",
+                "params": [
+                  {
+                    "value": "LSHFT"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
       "keyPositions": [
         50,
         40
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "name": "capsword",
+      "description": "",
+      "binding": {
+        "value": "&caps_word"
+      },
+      "keyPositions": [
+        54,
+        55
       ],
       "layers": [
         0,

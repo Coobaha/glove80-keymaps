@@ -17,11 +17,11 @@
       },
       "rightHand": {
         "mainRows": [
-          ["6", "7", "8", "9", "0", "="],
+          ["6", "7", "8", "9", "0", "key repeat"],
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
-          ["K", "P", ".", "-", "/", "Kpd"],
-          [null, "\\", "[", "]", null, null]
+          ["K", "P", ".", "-", "/", "<"],
+          [null, "=", "[", "]", null, null]
         ],
         "thumbRows": [
           ["⌥", "↵", "⎵"]
@@ -45,7 +45,7 @@
       },
       "rightHand": {
         "mainRows": [
-          ["HypF16", null, "☰", "⏸", "⇳", null],
+          [null, null, "☰", "⏸", "⇳", null],
           ["⌘X", "⇧⇥", "⌘Z", "⇧⌘Z", "⇥", "📷"],
           ["⌘C", "←", "↑", "↓", "→", "⚡⇧"],
           ["⌘V", "Home", "PgUp", "PgDn", "End", "⌘L"],
@@ -74,7 +74,7 @@
       },
       "rightHand": {
         "mainRows": [
-          ["HypF17", null, null, null, null, null],
+          [],
           ["`", "⌦", "⇧⇥", "Insert", "⎋", null],
           ["\"", "⌫", "⇥", "⎵", "↵", null],
           ["'", "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
@@ -91,7 +91,7 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["HypF18", "F1", "F2", "F3", "F4", "F5"],
+          [null, "F1", "F2", "F3", "F4", "F5"],
           ["⇥", null, "Home", "↑", "End", "PgUp"],
           ["⎋", "⌃Y", "←", "↓", "→", "PgDn"],
           ["Magic", "⌃Z", "⌃X", "⌃C", "⌃V", "⇧⌃V"],
@@ -132,7 +132,7 @@
       },
       "rightHand": {
         "mainRows": [
-          ["F19", null, null, null, null, null],
+          [],
           [null, "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
           ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
           ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
@@ -150,7 +150,7 @@
       "leftHand": {
         "mainRows": [
           [null, "☀-", "☀+", "⏮", "⏭", "⏯"],
-          ["Bootldr", "Sp+", "HypF20", "H+", "L+", "🌈"],
+          ["Bootldr", "Sp+", null, "H+", "L+", "🌈"],
           ["Reset", "Sp-", "S-", "H-", "L-", "E+"],
           [null, null, "BT", "BT", "BT", "BT"],
           [null, null, "Output", null, "Layer 2", null]

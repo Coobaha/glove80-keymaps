@@ -5,14 +5,14 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["F12", "1", "2", "3", "4", "5"],
+          ["`", "1", "2", "3", "4", "5"],
           ["⇥", "B", "L", "D", "W", "Z"],
           ["⎋", "N", "R", "T", "S", "G"],
           ["Magic", "Q", "X", "M", "C", "V"],
-          [null, null, "Home", "End", "`", null]
+          [null, null, "Home", "←", "→", null]
         ],
         "thumbRows": [
-          ["⌫", "⌦", "⌥"]
+          ["⌫", "⌦", "⌃"]
         ]
       },
       "rightHand": {
@@ -21,7 +21,7 @@
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
           ["K", "P", ".", "-", "/", "Kpd"],
-          [null, "\\", "[", "]", null, null]
+          [null, "↑", "↓", "End", null, null]
         ],
         "thumbRows": [
           ["⌥", "↵", "⎵"]
@@ -123,7 +123,7 @@
           [],
           [null, null, "Scroll←", "↑", "Scroll→", null],
           [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
-          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
+          [null, "Scroll↓", "mo16", "Fast", "Slow", "Scroll↓"],
           [null, null, "⌘X", "⌘C", "⌘V", null]
         ],
         "thumbRows": [
@@ -134,7 +134,7 @@
         "mainRows": [
           ["F19", null, null, null, null, null],
           [null, "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
+          ["Scroll↑", "Slow", "Fast", "mo16", "L Click", "Btn4"],
           ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
           [null, "←", "↓", "→", null, null]
         ],
@@ -171,7 +171,7 @@
           []
         ]
       },
-      "activeKey": "L_C6R4"
+      "activeKey": "L_C6R1"
     },
     {
       "name": "Gaming",
@@ -301,39 +301,6 @@
     "🔒World": "layer_toggle_world",
     "🗑": "clear",
     "😴": "cmd+alt+eject"
-  },
-  "customShiftMappings": {
-    "☝️": "🫵",
-    "✨": "🌟",
-    "❤️": "🥰",
-    "🌑": "🌕",
-    "🌖": "🌔",
-    "🌗": "🌓",
-    "🌘": "🌒",
-    "🎉": "🥳",
-    "🎯": "🎲",
-    "👌": "😎",
-    "👍": "👎",
-    "💪": "🏋️",
-    "📈": "📉",
-    "🔥": "🌊",
-    "😂": "🤣",
-    "😅": "😰",
-    "😉": "😜",
-    "😞": "😢",
-    "😨": "😱",
-    "🙂": "🙃",
-    "🙌": "👏",
-    "🙏": "🫡",
-    "🚀": "🧑‍🚀",
-    "🤓": "🥼",
-    "🤔": "🧐",
-    "🤩": "😍",
-    "🤯": "😵",
-    "🤷": "🤦",
-    "🧗": "🤹",
-    "🪄": "🧙",
-    "🫰": "👋"
   },
   "physicalLayout": {
     "layouts": {
