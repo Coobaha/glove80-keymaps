@@ -5,23 +5,23 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["`", "1", "2", "3", "4", "5"],
+          ["F12", "1", "2", "3", "4", "5"],
           ["⇥", "B", "L", "D", "W", "Z"],
           ["⎋", "N", "R", "T", "S", "G"],
           ["Magic", "Q", "X", "M", "C", "V"],
-          [null, null, "Home", "←", "→", null]
+          [null, null, "Home", "End", "`", null]
         ],
         "thumbRows": [
-          ["⌫", "⌦", "⌃"]
+          ["⌫", "⌦", "⌥"]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["6", "7", "8", "9", "0", "="],
+          ["6", "7", "8", "9", "0", "key repeat"],
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
-          ["K", "P", ".", "-", "/", "Kpd"],
-          [null, "↑", "↓", "End", null, null]
+          ["K", "P", ".", "-", "/", "<"],
+          [null, "=", "[", "]", null, null]
         ],
         "thumbRows": [
           ["⌥", "↵", "⎵"]
@@ -33,8 +33,8 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          [null, "⎋", "Insert", "⇧⇥", "⌦", null],
-          ["⇪", "↵", "⇧⌘Z", "⌘Z", "⌫", "⌘X"],
+          ["Insert", "⎋", "⇥", "⇧⇥", "⌦", "HypF13"],
+          ["⎵", "↵", "⇧⌘Z", "⌘Z", "⌫", "⌘X"],
           ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "⌘C"],
           ["⌘L", "⌘A", "Sel Line", "Sel Word", "⌘F", "⌘V"],
           [null, null, null, "⇧⌘G", "⌘G", null]
@@ -45,7 +45,7 @@
       },
       "rightHand": {
         "mainRows": [
-          ["HypF16", null, "☰", "⏸", "⇳", null],
+          [null, null, "☰", "⏸", "⇳", null],
           ["⌘X", "⇧⇥", "⌘Z", "⇧⌘Z", "⇥", "📷"],
           ["⌘C", "←", "↑", "↓", "→", "⚡⇧"],
           ["⌘V", "Home", "PgUp", "PgDn", "End", "⌘L"],
@@ -65,7 +65,7 @@
           ["`", ",", "(", ")", ";", "."],
           ["!", "[", "{", "}", "]", "?"],
           ["#", "^", "=", "_", "$", "*"],
-          ["~", "<", "|", "-", ">", "/"],
+          ["..", "&", "|", "-", ">", "/"],
           [null, null, "'", "\"", "+", null]
         ],
         "thumbRows": [
@@ -74,7 +74,7 @@
       },
       "rightHand": {
         "mainRows": [
-          ["HypF17", null, null, null, null, null],
+          [],
           ["`", "⌦", "⇧⇥", "Insert", "⎋", null],
           ["\"", "⌫", "⇥", "⎵", "↵", null],
           ["'", "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
@@ -91,7 +91,7 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["HypF18", "F1", "F2", "F3", "F4", "F5"],
+          [null, "F1", "F2", "F3", "F4", "F5"],
           ["⇥", null, "Home", "↑", "End", "PgUp"],
           ["⎋", "⌃Y", "←", "↓", "→", "PgDn"],
           ["Magic", "⌃Z", "⌃X", "⌃C", "⌃V", "⇧⌃V"],
@@ -123,7 +123,7 @@
           [],
           [null, null, "Scroll←", "↑", "Scroll→", null],
           [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
-          [null, "Scroll↓", "mo16", "Fast", "Slow", "Scroll↓"],
+          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
           [null, null, "⌘X", "⌘C", "⌘V", null]
         ],
         "thumbRows": [
@@ -132,9 +132,9 @@
       },
       "rightHand": {
         "mainRows": [
-          ["F19", null, null, null, null, null],
+          [],
           [null, "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          ["Scroll↑", "Slow", "Fast", "mo16", "L Click", "Btn4"],
+          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
           ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
           [null, "←", "↓", "→", null, null]
         ],
@@ -150,7 +150,7 @@
       "leftHand": {
         "mainRows": [
           [null, "☀-", "☀+", "⏮", "⏭", "⏯"],
-          ["Bootldr", "Sp+", "HypF20", "H+", "L+", "🌈"],
+          ["Bootldr", "Sp+", null, "H+", "L+", "🌈"],
           ["Reset", "Sp-", "S-", "H-", "L-", "E+"],
           [null, null, "BT", "BT", "BT", "BT"],
           [null, null, "Output", null, "Layer 2", null]
@@ -301,6 +301,39 @@
     "🔒World": "layer_toggle_world",
     "🗑": "clear",
     "😴": "cmd+alt+eject"
+  },
+  "customShiftMappings": {
+    "☝️": "🫵",
+    "✨": "🌟",
+    "❤️": "🥰",
+    "🌑": "🌕",
+    "🌖": "🌔",
+    "🌗": "🌓",
+    "🌘": "🌒",
+    "🎉": "🥳",
+    "🎯": "🎲",
+    "👌": "😎",
+    "👍": "👎",
+    "💪": "🏋️",
+    "📈": "📉",
+    "🔥": "🌊",
+    "😂": "🤣",
+    "😅": "😰",
+    "😉": "😜",
+    "😞": "😢",
+    "😨": "😱",
+    "🙂": "🙃",
+    "🙌": "👏",
+    "🙏": "🫡",
+    "🚀": "🧑‍🚀",
+    "🤓": "🥼",
+    "🤔": "🧐",
+    "🤩": "😍",
+    "🤯": "😵",
+    "🤷": "🤦",
+    "🧗": "🤹",
+    "🪄": "🧙",
+    "🫰": "👋"
   },
   "physicalLayout": {
     "layouts": {

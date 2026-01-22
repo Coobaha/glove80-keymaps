@@ -2,10 +2,10 @@
   "keyboard": "go60",
   "firmware_api_version": "1",
   "locale": "en-US",
-  "uuid": "7836c82e-6f4a-4dd6-aa28-1075fdc81567",
-  "parent_uuid": "1ffecdc0-c17c-4816-92f4-7a615a96919c",
+  "uuid": "1ffecdc0-c17c-4816-92f4-7a615a96919c",
+  "parent_uuid": "f47e1c29-113c-4f14-994f-82fc818e688c",
   "unlisted": false,
-  "date": 1769023986,
+  "date": 1768909429,
   "creator": "cbhz",
   "title": "TailorKey v4.2l macOS Bilateral",
   "notes": "🧿TK42lBIL: https://sites.google.com/view/tailorkey\nTailorKey is a zero-code, Glorious Engrammer–inspired layout that’s beginner-friendly yet fully pro-ready. \nIt delivers a full set of advanced features, including:\n• Advanced Home Row Mods with Bilateral Combinations Enforcement (Sunaku)\n• Autoshift\n• Symbol, Cursor, and Gaming Layers\n• RGB Lighting (optional)\n• Advanced Mouse Emulation\n• Combo Keys\n\nTailorKey leverages the Layout Editor’s powerful built-in (native) functions, enabling easy customization, or allows you to simply copy its capabilities to craft your own unique layout—all without relying on Custom-Defined Behaviors.\n\n🖱️Mouse Emulation\nEnable mouse emulation by turning on the HID_POINTING option under Advanced Configuration.\nIf you’re using mouse emulation for the first time, unpair the keyboard from all host computers and then re-pair it.\n\nThis zero-code layout is developed by @moosy. More information is available on https://sites.google.com/view/tailorkey\nTailorKey is inspired by the fully featured Glorious Engrammer, developed by @sunaku. Please see https://github.com/sunaku/glove80-keymaps/releases for the Glorious Engrammer layout.\n\n💡 Tip: Want to use only part of this layout (like Home-Row Mods or AutoShift)? Just copy the relevant layer—its associated macros and hold-tap actions will be included automatically.\n📺 See how it's done here:  https://www.youtube.com/watch?v=m72eTAEUWho",
@@ -192,11 +192,7 @@
           {
             "value": "&gr_au"
           }
-        ],
-        "decoration": {
-          "label": "'_",
-          "background": "#ffffffff"
-        }
+        ]
       },
       {
         "value": "&kp",
@@ -356,11 +352,7 @@
           {
             "value": "&gr_cm"
           }
-        ],
-        "decoration": {
-          "label": ",?",
-          "background": "#ffffffff"
-        }
+        ]
       },
       {
         "value": "&magic"
@@ -427,11 +419,7 @@
           {
             "value": "&gr_pd"
           }
-        ],
-        "decoration": {
-          "label": ".>",
-          "background": "#ffffffff"
-        }
+        ]
       },
       {
         "value": "Custom",
@@ -439,11 +427,7 @@
           {
             "value": "&gr_mi"
           }
-        ],
-        "decoration": {
-          "label": "-\"",
-          "background": "#ffffffff"
-        }
+        ]
       },
       {
         "value": "Custom",
@@ -451,11 +435,7 @@
           {
             "value": "&gr_fs"
           }
-        ],
-        "decoration": {
-          "label": "/<",
-          "background": "#ffffffff"
-        }
+        ]
       },
       {
         "value": "&lt",
@@ -464,7 +444,7 @@
             "value": 13
           },
           {
-            "value": "EQUAL"
+            "value": "BSLH"
           }
         ]
       },
@@ -485,18 +465,54 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "&mt",
         "params": [
+          {
+            "value": "LA",
+            "params": [
+              {
+                "value": "LS",
+                "params": [
+                  {
+                    "value": "LG",
+                    "params": [
+                      {
+                        "value": "LCTRL"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
           {
             "value": "GRAVE"
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "&mt",
         "params": [
           {
-            "value": "FSLH"
+            "value": "LS",
+            "params": [
+              {
+                "value": "LA",
+                "params": [
+                  {
+                    "value": "LG",
+                    "params": [
+                      {
+                        "value": "LCTRL"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "value": "EQUAL"
           }
         ]
       },
@@ -4127,7 +4143,32 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LC",
+            "params": [
+              {
+                "value": "LA",
+                "params": [
+                  {
+                    "value": "LS",
+                    "params": [
+                      {
+                        "value": "LG",
+                        "params": [
+                          {
+                            "value": "F13"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "value": "&none"
@@ -4723,12 +4764,7 @@
         ]
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -4750,7 +4786,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "BSPC"
+            "value": "END"
           }
         ]
       },
@@ -5045,7 +5081,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "SPACE"
+            "value": "KP_N0"
           }
         ]
       },
@@ -11971,6 +12007,45 @@
       ]
     },
     {
+      "name": "sticky_hyp_rght_v1_TKZ",
+      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LG",
+            "params": [
+              {
+                "value": "LA",
+                "params": [
+                  {
+                    "value": "LC",
+                    "params": [
+                      {
+                        "value": "LSHFT"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keyPositions": [
+        43,
+        51
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
       "name": "tabswitch_gui_v1_TKZ",
       "description": "Alt Tab Switcher (Cursor Layer) - TailorKey",
       "binding": {
@@ -11996,6 +12071,39 @@
       ]
     },
     {
+      "name": "sticky_meh_rght_v1_TKZ",
+      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
+      "binding": {
+        "value": "&sk",
+        "params": [
+          {
+            "value": "LA",
+            "params": [
+              {
+                "value": "LC",
+                "params": [
+                  {
+                    "value": "LSHFT"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "keyPositions": [
+        52,
+        44
+      ],
+      "timeoutMs": 50,
+      "layers": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
       "name": "capslock_v1_TKZ",
       "description": "capslock when pressing both T1's - TailorKey",
       "binding": {
@@ -12009,6 +12117,23 @@
       "keyPositions": [
         54,
         59
+      ],
+      "layers": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "name": "capsword",
+      "description": "",
+      "binding": {
+        "value": "&caps_word"
+      },
+      "keyPositions": [
+        50,
+        51
       ],
       "layers": [
         0,
@@ -12044,117 +12169,6 @@
       ]
     },
     {
-      "name": "sticky_hyp_left_v1_TKZ",
-      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LG",
-            "params": [
-              {
-                "value": "LA",
-                "params": [
-                  {
-                    "value": "LC",
-                    "params": [
-                      {
-                        "value": "LSHFT"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "keyPositions": [
-        50,
-        54
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "name": "sticky_hyp_rght_v1_TKZ",
-      "description": "sticky \"hyper\" modifiers (Win + Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LG",
-            "params": [
-              {
-                "value": "LA",
-                "params": [
-                  {
-                    "value": "LC",
-                    "params": [
-                      {
-                        "value": "LSHFT"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "keyPositions": [
-        51,
-        59
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "name": "sticky_meh_rght_v1_TKZ",
-      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LA",
-            "params": [
-              {
-                "value": "LC",
-                "params": [
-                  {
-                    "value": "LSHFT"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "keyPositions": [
-        43,
-        51
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        2,
-        3,
-        1
-      ]
-    },
-    {
       "name": "tabswitch_ctrl_v1_TKZ",
       "description": "Ctrl Tab Switcher (Cursor Layer) - TailorKey",
       "binding": {
@@ -12168,56 +12182,9 @@
           }
         ]
       },
-      "keyPositions": [],
-      "layers": [
-        0,
-        2,
-        3,
-        1
-      ]
-    },
-    {
-      "name": "sticky_meh_left_v1_TKZ",
-      "description": "sticky \"meh\" modifiers (Alt + Ctrl + Shift) - TailorKey",
-      "binding": {
-        "value": "&sk",
-        "params": [
-          {
-            "value": "LA",
-            "params": [
-              {
-                "value": "LC",
-                "params": [
-                  {
-                    "value": "LSHFT"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
       "keyPositions": [
         50,
         40
-      ],
-      "timeoutMs": 50,
-      "layers": [
-        0,
-        2,
-        3,
-        1
-      ]
-    },
-    {
-      "name": "capsword",
-      "description": "",
-      "binding": {
-        "value": "&caps_word"
-      },
-      "keyPositions": [
-        54,
-        55
       ],
       "layers": [
         0,

@@ -720,12 +720,12 @@ Examples:
     output_file = args.output
     if output_file is None:
         if args.keyboard:
-            output_file = f'{args.keyboard}_config.json'
+            output_file = f'{args.keyboard}_overkeys.json'
         elif input_file == 'keymap.json':
-            output_file = 'split_matrix_config.json'
+            output_file = 'glove80_overkeys.json'
         else:
             base = os.path.basename(input_file).rsplit('.', 1)[0]
-            output_file = f'{base}_config.json'
+            output_file = f'{base}_overkeys.json'
 
     layer_names = None
     if args.layers:

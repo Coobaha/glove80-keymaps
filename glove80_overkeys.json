@@ -5,115 +5,172 @@
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["F12", "1", "2", "3", "4", "5"],
-          ["⇥", "B", "L", "D", "W", "Z"],
-          ["⎋", "N", "R", "T", "S", "G"],
-          ["Magic", "Q", "X", "M", "C", "V"],
-          [null, null, "Home", "End", "`", null]
+          [],
+          ["=", "1", "2", "3", "4", "5"],
+          ["`", "B", "L", "D", "W", "Z"],
+          ["⌥⌃⇧⌘", "N", "R", "T", "S", "G"],
+          ["stumb LAYER ", "left pinky L", "X", "M", "C", "V"],
+          ["Magic", "`", "[", "]", "\\", null]
         ],
         "thumbRows": [
-          ["⌫", "⌦", "⌥"]
+          ["⎋", "(", ")"],
+          ["⌫", "Delete", "Insert"]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["6", "7", "8", "9", "0", "key repeat"],
+          [],
+          ["6", "7", "8", "9", "0", "-"],
           ["'", "F", "O", "U", "J", ";"],
           ["Y", "H", "A", "E", "I", ","],
-          ["K", "P", ".", "-", "/", "<"],
-          [null, "=", "[", "]", null, null]
+          ["K", "P", ".", "-", "/", "stumb LAYER "],
+          [null, "PgUp", "Scroll↑", "Scroll↓", "PgDn", "Magic"]
         ],
         "thumbRows": [
-          ["⌥", "↵", "⎵"]
+          ["Home", "END", "↵"],
+          ["Typing", "⇥", "⎵"]
         ]
       }
+    },
+    {
+      "name": "Function",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", "⌘⌥F16"],
+          [null, "↵", "⎵", "⇥", "⌫", "⌘⌥F17"],
+          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "⌘⌥F18"],
+          [null, "Sel All", "Sel Line", "Sel Word", "_FIND", "⌘⌥F19"],
+          [null, "_UNDO", "_REDO", "_FIND_PREV", "_FIND_NEXT", null]
+        ],
+        "thumbRows": [
+          ["🔒Fn", null, null],
+          []
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          [],
+          ["🏠", "▶", "⏮", "⏭", "⏹", "⏏"],
+          ["⌘⇧N", "F7", "F8", "F9", "F10", "F13"],
+          ["⌘⇧Y", "F4", "F5", "F6", "F11", "F14"],
+          ["⌘⇧A", "F1", "F2", "F3", "F12", "F15"],
+          [null, "☀⚡", "☀+", "☀-", "☀0", "☀🤖"]
+        ],
+        "thumbRows": [
+          ["⏯", "⏮", "⏭"],
+          ["🔇", "🔉", "🔊"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F20",
+      "type": "toggle",
+      "activeKey": "L_T6"
     },
     {
       "name": "Cursor",
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          [null, "⎋", "Insert", "⇧⇥", "⌦", null],
-          ["⇪", "↵", "⇧⌘Z", "⌘Z", "⌫", "⌘X"],
-          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "⌘C"],
-          ["⌘L", "⌘A", "Sel Line", "Sel Word", "⌘F", "⌘V"],
-          [null, null, null, "⇧⌘G", "⌘G", null]
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", "`"],
+          [null, "↵", "⎵", "⇥", "⌫", "_CUT"],
+          ["HypS", "⌃", "⌥", "⌘", "⇧", "_COPY"],
+          ["⌘L", "Sel All", "Sel Line", "Sel Word", "_FIND", "_PASTE"],
+          ["⌘K", "_UNDO", "_REDO", "_FIND_PREV", "_FIND_NEXT", null]
         ],
         "thumbRows": [
-          []
+          ["⇧⇥", "⇥", null],
+          ["🔒Cur", null, null]
         ]
       },
       "rightHand": {
         "mainRows": [
-          [null, null, "☰", "⏸", "⇳", null],
-          ["⌘X", "⇧⇥", "⌘Z", "⇧⌘Z", "⇥", "📷"],
-          ["⌘C", "←", "↑", "↓", "→", "⚡⇧"],
-          ["⌘V", "Home", "PgUp", "PgDn", "End", "⌘L"],
-          [null, "⌘F", "⇧⌘G", "⌘G", null, null]
+          [],
+          ["`", null, null, null, null, null],
+          ["_CUT", "⇧⇥", "_UNDO", "_REDO", "⇥", null],
+          ["_COPY", "←", "↑", "↓", "→", "HypS"],
+          ["_PASTE", "Home", "PgUp", "PgDn", "End", "⌘L"],
+          [null, "_FIND", "_FIND_PREV", "_FIND_NEXT", "⌘H", "⌘K"]
         ],
         "thumbRows": [
-          ["Clear", "Ext Line", "Ext Word"]
+          ["Clear", "Ext Line", "Ext Word"],
+          ["Sel All", "Sel Line", "Sel Word"]
         ]
       },
-      "activeKey": "L_T1"
+      "trigger": "cmd+alt+ctrl+shift+F19",
+      "type": "toggle",
+      "activeKey": "L_T4"
+    },
+    {
+      "name": "Number",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [null, "⎋", "Insert", "⇧⇥", "⌦", null],
+          [null, "↵", "⎵", "⇥", "⌫", "F17"],
+          ["⚡⇧", "⌃", "⌥", "⌘", "⇧", "F18"],
+          ["_", "Sel All", "Sel Line", "Sel Word", "_FIND", "F19"],
+          [null, "_UNDO", "_REDO", "_FIND_PREV", "_FIND_NEXT", null]
+        ],
+        "thumbRows": [
+          [],
+          [null, "🔒Num", null]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          ["A", "B", "C", "D", "E"],
+          ["|", "#", "$", "^", "~", "!"],
+          ["G", "7", "8", "9", ":", "%"],
+          ["K", "4", "5", "6", "-", "+"],
+          ["J", "1", "2", "3", "/", "*"],
+          [null, "(", "[", "]", ")", "@"]
+        ],
+        "thumbRows": [
+          ["<", ">", ","],
+          ["=", ".", "0"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+F18",
+      "type": "toggle",
+      "activeKey": "L_T5"
     },
     {
       "name": "Symbol",
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
+          [],
           ["`", ",", "(", ")", ";", "."],
           ["!", "[", "{", "}", "]", "?"],
           ["#", "^", "=", "_", "$", "*"],
           ["~", "<", "|", "-", ">", "/"],
-          [null, null, "'", "\"", "+", null]
+          ["..", "&", "'", "\"", "+", null]
         ],
         "thumbRows": [
+          ["\\", ".", "*"],
           ["%", ":", "@"]
         ]
       },
       "rightHand": {
         "mainRows": [
           [],
+          [],
           ["`", "⌦", "⇧⇥", "Insert", "⎋", null],
           ["\"", "⌫", "⇥", "⎵", "↵", null],
-          ["'", "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          [null, "\\", "&", "..", null, null]
+          ["'", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", null],
+          [null, "F20", null, null, null, null]
         ],
         "thumbRows": [
-          []
+          [],
+          [null, null, "🔒Sym"]
         ]
       },
-      "activeKey": "R_T1"
-    },
-    {
-      "name": "Keypad",
-      "layoutStyle": "split_matrix_explicit",
-      "leftHand": {
-        "mainRows": [
-          [null, "F1", "F2", "F3", "F4", "F5"],
-          ["⇥", null, "Home", "↑", "End", "PgUp"],
-          ["⎋", "⌃Y", "←", "↓", "→", "PgDn"],
-          ["Magic", "⌃Z", "⌃X", "⌃C", "⌃V", "⇧⌃V"],
-          []
-        ],
-        "thumbRows": [
-          []
-        ]
-      },
-      "rightHand": {
-        "mainRows": [
-          ["F6", "F7", "F8", "F9", "F10", "F11"],
-          ["7", "8", "9", "-", "/", "F12"],
-          ["4", "5", "6", "+", "*", "NumLock"],
-          ["1", "2", "3", "⏎", "=", "Layer 0"],
-          [null, "0", ".", "⏎", null, null]
-        ],
-        "thumbRows": [
-          [null, null, "0"]
-        ]
-      },
-      "activeKey": "L_T2"
+      "trigger": "cmd+alt+ctrl+shift+F17",
+      "type": "toggle",
+      "activeKey": "R_T4"
     },
     {
       "name": "Mouse",
@@ -121,90 +178,144 @@
       "leftHand": {
         "mainRows": [
           [],
-          [null, null, "Scroll←", "↑", "Scroll→", null],
-          [null, "Scroll↑", "←", "↓", "→", "Scroll↑"],
-          [null, "Scroll↓", "Slow", "Warp", "Fast", "Scroll↓"],
-          [null, null, "⌘X", "⌘C", "⌘V", null]
+          [],
+          [null, null, "Scroll", "↑", "Scroll", null],
+          [null, "Scroll", "←", "↓", "→", "Scroll"],
+          [null, "Scroll", "_CUT", "_COPY", "_PASTE", "Scroll"],
+          [null, "Warp", "Fine", "Slow", "Fast", null]
         ],
         "thumbRows": [
+          ["M Click", "☰", "Btn5"],
           ["L Click", "R Click", "Btn4"]
         ]
       },
       "rightHand": {
         "mainRows": [
           [],
-          [null, "⚡⇧", "⚡⇧", "⚡⇧", "⚡⇧", null],
-          ["Scroll↑", "Fast", "Warp", "Slow", "L Click", "Btn4"],
-          ["Scroll↓", "Scroll←", "↑", "Scroll→", "R Click", "Btn5"],
-          [null, "←", "↓", "→", null, null]
-        ],
-        "thumbRows": [
-          ["L Click", null, "R Click"]
-        ]
-      },
-      "activeKey": "R_T2"
-    },
-    {
-      "name": "Magic",
-      "layoutStyle": "split_matrix_explicit",
-      "leftHand": {
-        "mainRows": [
-          [null, "☀-", "☀+", "⏮", "⏭", "⏯"],
-          ["Bootldr", "Sp+", null, "H+", "L+", "🌈"],
-          ["Reset", "Sp-", "S-", "H-", "L-", "E+"],
-          [null, null, "BT", "BT", "BT", "BT"],
-          [null, null, "Output", null, "Layer 2", null]
-        ],
-        "thumbRows": [
-          ["Layer 0", null, "Layer 3"]
-        ]
-      },
-      "rightHand": {
-        "mainRows": [
-          ["🔇", "🔉", "🔊", "HypF21", "BT", "BT"],
-          ["HypF21", null, null, null, null, "Bootldr"],
-          [null, "ABC", null, "АБВ", null, "Reset"],
           [],
-          []
+          ["Btn4", "L Click", "M Click", "R Click", "Btn5", null],
+          ["Scroll", "Fast", "Slow", "Fine", "Warp", "Scroll"],
+          ["Scroll", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", "Scroll"],
+          [null, "←", "↑", "↓", "→", "☰"]
         ],
         "thumbRows": [
-          []
+          ["_CUT", "_COPY", "_PASTE"],
+          [null, "🔒Mouse", null]
         ]
       },
-      "activeKey": "L_C6R1"
+      "trigger": "cmd+alt+ctrl+shift+F16",
+      "type": "toggle",
+      "activeKey": "R_T5"
     },
     {
-      "name": "Gaming",
+      "name": "System",
       "layoutStyle": "split_matrix_explicit",
       "leftHand": {
         "mainRows": [
-          ["⎋", "1", "2", "3", "4", "5"],
-          ["↵", "⇥", "Q", "W", "E", "R"],
-          ["`", "⇧", "A", "S", "D", "F"],
-          ["B", "⌃", "Z", "X", "C", "V"],
-          [null, null, "⌥", "T", "G", null]
+          [],
+          [],
+          [null, "Sp+", "S+", "H+", "L+", "E+"],
+          [null, "Sp-", "S-", "H-", "L-", "E-"],
+          [null, null, null, "⏸", "📷", "🌈"],
+          [null, null, null, null, "SysRq", null]
         ],
         "thumbRows": [
-          ["⎵", "⇧", "⌃"]
+          ["🔒", "😴", "⏻"],
+          ["⇳", "NumLock", "⇪"]
         ]
       },
       "rightHand": {
         "mainRows": [
-          ["6", "7", "8", "9", "0", "-"],
-          ["Y", "U", "I", "O", "P", "+"],
-          ["H", "J", "K", "L", ";", "\""],
-          ["N", "M", "↑", "<", ">", "⌘"],
-          [null, "←", "↓", "→", null, null]
+          [],
+          [],
+          ["E+", "L+", "H+", "S+", "Sp+", null],
+          ["E-", "L-", "H-", "S-", "Sp-", "🔒"],
+          ["🌈", "⚡⇧", "⚡⌘", "⚡⌥", "⚡⌃", "😴"],
+          [null, "SysRq", "⇳", "NumLock", "⇪", "⏻"]
         ],
         "thumbRows": [
-          ["⌫", "⌥", "↵"]
+          [null, null, "🔒Sys"],
+          [null, "📷", "⏸"]
         ]
-      }
+      },
+      "trigger": "cmd+alt+ctrl+shift+F15",
+      "type": "toggle",
+      "activeKey": "R_T6"
+    },
+    {
+      "name": "Lower",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          [],
+          [],
+          ["GLOBE", null, null, null, null, null],
+          ["⌥", null, null, null, null, null],
+          [],
+          [null, null, null, null, "🔒Emoji", null]
+        ],
+        "thumbRows": [
+          ["🔒Fn", null, null],
+          ["🔒Cur", "🔒Num", null]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          ["NumLock", "/", "*", "-", null],
+          ["Clear", "7", "8", "9", "-", "/"],
+          ["(", "4", "5", "6", "+", "*"],
+          [")", "1", "2", "3", "⏎", "="],
+          ["0", "0", ",", ".", "⏎", null],
+          [null, "🔒World", null, null, null, null]
+        ],
+        "thumbRows": [
+          [null, null, "🔒Sys"],
+          [null, "🔒Mouse", "🔒Sym"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+EQUAL",
+      "type": "toggle",
+      "activeKey": "L_T1"
+    },
+    {
+      "name": "Emoji",
+      "layoutStyle": "split_matrix_explicit",
+      "leftHand": {
+        "mainRows": [
+          ["️☁️", "🌥", "⛅", "️🌤️", "☀️"],
+          ["🌈", "🏻", "🏼", "🏽", "🏾", "🏿"],
+          ["⬅️", "🦲", "🦰", "🦱", "🦳", "➡️"],
+          ["♂️", "🦱", "🏼", "♀️", "⚡⇧", "♀️"],
+          ["👴", "👨", "👦", "👧", "👩", "👵"],
+          ["🎯", "📈", "👶", "🍼", "🔒Emoji", null]
+        ],
+        "thumbRows": [
+          ["️🏙️", "️🌇", "🌃"],
+          ["‍", "🌅", "🌄"]
+        ]
+      },
+      "rightHand": {
+        "mainRows": [
+          ["🌑", "🌘", "🌗", "🌖", "🌕"],
+          ["🎉", "❤️", "🔥", "💪", "🧗", "🤓"],
+          ["😂", "🙂", "🤩", "😉", "😨", "🤯"],
+          ["🫰", "👌", "🙏", "😅", "😞", "🤔"],
+          ["💁", "🙆", "🙇", "🙋", "🙅", "🤷"],
+          [null, "✅", "💯", "⚠️", "❌", "❓"]
+        ],
+        "thumbRows": [
+          ["🪄", "🚀", "✨"],
+          ["🙌", "☝️", "👍"]
+        ]
+      },
+      "trigger": "cmd+alt+ctrl+shift+GRAVE",
+      "type": "toggle",
+      "activeKey": "R_T1"
     }
   ],
   "defaultUserLayout": "GRAPHITE",
   "homeRow": {
-    "rowIndex": 3,
+    "rowIndex": 4,
     "leftPosition": 2,
     "rightPosition": 2
   },
@@ -212,12 +323,19 @@
     "ALT": "alt",
     "Btn4": "button4",
     "Btn5": "button5",
+    "C_BRI_AUTO": "f14",
     "C_BRI_DN": "f1",
+    "C_BRI_MAX": "shift+f2",
+    "C_BRI_MIN": "shift+f1",
     "C_BRI_UP": "f2",
+    "C_EJECT": "f12",
+    "C_MEDIA_HOME": "f3",
     "C_MUTE": "f10",
     "C_NEXT": "f9",
+    "C_PLAY": "f8",
     "C_PP": "f8",
     "C_PREV": "f7",
+    "C_STOP": "f6",
     "C_VOL_DN": "f11",
     "C_VOL_UP": "f12",
     "Clear": "left",
@@ -275,12 +393,18 @@
     "⌫": "backspace",
     "⎋": "escape",
     "⎵": "space",
+    "⏏": "f12",
     "⏭": "f9",
     "⏮": "f7",
     "⏯": "f8",
+    "⏹": "f6",
     "⏻": "power",
+    "▶": "f8",
     "☀+": "f2",
     "☀-": "f1",
+    "☀0": "shift+f1",
+    "☀⚡": "shift+f2",
+    "☀🤖": "f14",
     "☰": "button3",
     "🏠": "f3",
     "📷": "cmd+shift+4",
@@ -301,6 +425,39 @@
     "🔒World": "layer_toggle_world",
     "🗑": "clear",
     "😴": "cmd+alt+eject"
+  },
+  "customShiftMappings": {
+    "☝️": "🫵",
+    "✨": "🌟",
+    "❤️": "🥰",
+    "🌑": "🌕",
+    "🌖": "🌔",
+    "🌗": "🌓",
+    "🌘": "🌒",
+    "🎉": "🥳",
+    "🎯": "🎲",
+    "👌": "😎",
+    "👍": "👎",
+    "💪": "🏋️",
+    "📈": "📉",
+    "🔥": "🌊",
+    "😂": "🤣",
+    "😅": "😰",
+    "😉": "😜",
+    "😞": "😢",
+    "😨": "😱",
+    "🙂": "🙃",
+    "🙌": "👏",
+    "🙏": "🫡",
+    "🚀": "🧑‍🚀",
+    "🤓": "🥼",
+    "🤔": "🧐",
+    "🤩": "😍",
+    "🤯": "😵",
+    "🤷": "🤦",
+    "🧗": "🤹",
+    "🪄": "🧙",
+    "🫰": "👋"
   },
   "physicalLayout": {
     "layouts": {
@@ -339,20 +496,6 @@
             "row": 0,
             "col": 4,
             "x": 4,
-            "y": 0
-          },
-          {
-            "label": "L_C1R1",
-            "row": 0,
-            "col": 5,
-            "x": 5,
-            "y": 0
-          },
-          {
-            "label": "R_C1R1",
-            "row": 0,
-            "col": 12,
-            "x": 11.5,
             "y": 0
           },
           {
@@ -643,6 +786,20 @@
             "y": 3.5
           },
           {
+            "label": "L_C6R5",
+            "row": 4,
+            "col": 0,
+            "x": 0,
+            "y": 4.5
+          },
+          {
+            "label": "L_C5R5",
+            "row": 4,
+            "col": 1,
+            "x": 1,
+            "y": 4.5
+          },
+          {
             "label": "L_C4R5",
             "row": 4,
             "col": 2,
@@ -661,6 +818,20 @@
             "row": 4,
             "col": 4,
             "x": 4,
+            "y": 4
+          },
+          {
+            "label": "L_C1R5",
+            "row": 4,
+            "col": 5,
+            "x": 5,
+            "y": 4
+          },
+          {
+            "label": "R_C1R5",
+            "row": 4,
+            "col": 12,
+            "x": 11.5,
             "y": 4
           },
           {
@@ -685,64 +856,208 @@
             "y": 4
           },
           {
-            "label": "L_T1",
+            "label": "R_C5R5",
+            "row": 4,
+            "col": 16,
+            "x": 15.5,
+            "y": 4.5
+          },
+          {
+            "label": "R_C6R5",
+            "row": 4,
+            "col": 17,
+            "x": 16.5,
+            "y": 4.5
+          },
+          {
+            "label": "L_C6R6",
             "row": 5,
+            "col": 0,
+            "x": 0,
+            "y": 5.5
+          },
+          {
+            "label": "L_C5R6",
+            "row": 5,
+            "col": 1,
+            "x": 1,
+            "y": 5.5
+          },
+          {
+            "label": "L_C4R6",
+            "row": 5,
+            "col": 2,
+            "x": 2,
+            "y": 5
+          },
+          {
+            "label": "L_C3R6",
+            "row": 5,
+            "col": 3,
+            "x": 3,
+            "y": 5
+          },
+          {
+            "label": "L_C2R6",
+            "row": 5,
+            "col": 4,
+            "x": 4,
+            "y": 5
+          },
+          {
+            "label": "R_C2R6",
+            "row": 5,
+            "col": 13,
+            "x": 12.5,
+            "y": 5
+          },
+          {
+            "label": "R_C3R6",
+            "row": 5,
+            "col": 14,
+            "x": 13.5,
+            "y": 5
+          },
+          {
+            "label": "R_C4R6",
+            "row": 5,
+            "col": 15,
+            "x": 14.5,
+            "y": 5
+          },
+          {
+            "label": "R_C5R6",
+            "row": 5,
+            "col": 16,
+            "x": 15.5,
+            "y": 5.5
+          },
+          {
+            "label": "R_C6R6",
+            "row": 5,
+            "col": 17,
+            "x": 16.5,
+            "y": 5.5
+          },
+          {
+            "label": "L_T1",
+            "row": 6,
             "col": 6,
             "x": 5.2,
-            "y": 4.1,
-            "r": 12.5,
+            "y": 5.6,
+            "r": 12,
             "rx": 5.2,
-            "ry": 4.1
+            "ry": 5.6
           },
           {
             "label": "L_T2",
-            "row": 5,
+            "row": 6,
             "col": 7,
             "x": 6.4,
-            "y": 4.4,
-            "r": 25,
+            "y": 5.9,
+            "r": 24,
             "rx": 6.4,
-            "ry": 4.4
+            "ry": 5.9
           },
           {
             "label": "L_T3",
-            "row": 5,
+            "row": 6,
             "col": 8,
             "x": 7.5,
-            "y": 4.95,
-            "r": 37,
+            "y": 6.4,
+            "r": 36,
             "rx": 7.5,
-            "ry": 4.95
+            "ry": 6.4
           },
           {
             "label": "R_T3",
-            "row": 5,
+            "row": 6,
             "col": 9,
-            "x": 9.15,
-            "y": 5.5,
-            "r": -37,
-            "rx": 9.15,
-            "ry": 5.5
+            "x": 9.0,
+            "y": 6.5,
+            "r": -36,
+            "rx": 9.0,
+            "ry": 6.5
           },
           {
             "label": "R_T2",
-            "row": 5,
+            "row": 6,
             "col": 10,
-            "x": 10.15,
-            "y": 4.8,
-            "r": -25,
-            "rx": 10.15,
-            "ry": 4.8
+            "x": 10.1,
+            "y": 6.0,
+            "r": -24,
+            "rx": 10.1,
+            "ry": 6.0
           },
           {
             "label": "R_T1",
-            "row": 5,
+            "row": 6,
             "col": 11,
             "x": 11.3,
-            "y": 4.3,
-            "r": -12.5,
+            "y": 5.7,
+            "r": -12,
             "rx": 11.3,
-            "ry": 4.3
+            "ry": 5.7
+          },
+          {
+            "label": "L_T4",
+            "row": 7,
+            "col": 6,
+            "x": 5.2,
+            "y": 6.8,
+            "r": 12,
+            "rx": 5.2,
+            "ry": 6.8
+          },
+          {
+            "label": "L_T5",
+            "row": 7,
+            "col": 7,
+            "x": 6.4,
+            "y": 7.1,
+            "r": 24,
+            "rx": 6.4,
+            "ry": 7.1
+          },
+          {
+            "label": "L_T6",
+            "row": 7,
+            "col": 8,
+            "x": 7.5,
+            "y": 7.6,
+            "r": 36,
+            "rx": 7.5,
+            "ry": 7.6
+          },
+          {
+            "label": "R_T6",
+            "row": 7,
+            "col": 9,
+            "x": 9.0,
+            "y": 7.7,
+            "r": -36,
+            "rx": 9.0,
+            "ry": 7.7
+          },
+          {
+            "label": "R_T5",
+            "row": 7,
+            "col": 10,
+            "x": 10.1,
+            "y": 7.2,
+            "r": -24,
+            "rx": 10.1,
+            "ry": 7.2
+          },
+          {
+            "label": "R_T4",
+            "row": 7,
+            "col": 11,
+            "x": 11.3,
+            "y": 6.9,
+            "r": -12,
+            "rx": 11.3,
+            "ry": 6.9
           }
         ]
       }
